@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import himtiLogo from '../../assets/himti-logo.png'; // KEMBALIKAN LOGO HIMTI
+import himtiLogo from '../../assets/himti-logo.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,8 +25,8 @@ const Navbar = () => {
 
   // Class styling menggunakan warna 'primary' dari tema Anda
   const linkBaseClass = "text-base font-medium transition-colors duration-300";
-  const activeLinkClass = "text-primary"; // MENGGUNAKAN WARNA UNGU
-  const inactiveLinkClass = "text-gray-600 hover:text-primary"; // MENGGUNAKAN WARNA UNGU
+  const activeLinkClass = "text-primary";
+  const inactiveLinkClass = "text-gray-600 hover:text-primary";
 
   return (
     <nav 
@@ -37,12 +37,20 @@ const Navbar = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between h-20">
           
-          {/* Logo HIMTI */}
-          <div className="flex-shrink-0">
-            <NavLink to="/">
+          {/* --- BAGIAN YANG DIPERBAIKI --- */}
+          <NavLink to="/" className="flex-shrink-0">
+            <div className="flex items-center gap-3">
               <img className="h-10 w-auto" src={himtiLogo} alt="HIMTI Learning Group" />
-            </NavLink>
-          </div>
+              {/* REVISI: 
+                Class 'hidden' dan 'sm:block' dihapus.
+                Ukuran font diatur menjadi 'text-base' di mobile dan 'text-lg' di layar 'sm' ke atas
+                agar terlihat proporsional.
+              */}
+              <span className="font-bold text-base sm:text-lg text-secondary">
+                HIMTI Learning Group
+              </span>
+            </div>
+          </NavLink>
 
           {/* Nav Links (Desktop) */}
           <div className="hidden md:flex md:items-center md:space-x-10">
@@ -62,7 +70,7 @@ const Navbar = () => {
           {/* Tombol CTA (Desktop) */}
           <div className="hidden md:flex items-center gap-4">
             <a
-              href="#" // Ganti dengan link login jika ada
+              href="#"
               className="font-semibold text-gray-600 hover:text-primary transition-colors"
             >
               Login
