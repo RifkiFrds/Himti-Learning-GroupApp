@@ -1,7 +1,11 @@
-const CourseCard = ({ title, description, link, thumbnailColor }) => {
+const CourseCard = ({ title, description, link, image }) => {
   return (
-    <div className="flex flex-col bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
-      <div className={`h-40 w-full ${thumbnailColor}`}></div>
+    <div className="fade-in-up flex flex-col bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+        <img
+        src={image}
+        alt={title}
+        className="w-full h-48 object-cover"
+      />
 
       <div className="p-6 flex flex-col flex-grow">
         <h2 className="text-xl font-bold text-secondary mb-2">{title}</h2>
@@ -10,9 +14,9 @@ const CourseCard = ({ title, description, link, thumbnailColor }) => {
           href={link}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-auto inline-block w-full text-center bg-primary text-white font-semibold py-2 px-4 rounded-lg hover:bg-green-600 transition-colors"
+          className="mt-auto inline-block w-full text-center bg-primary text-white font-semibold py-2 px-4 rounded-lg hover:bg-yellow-600 transition-colors"
         >
-          Mulai Belajar
+          Belajar Sekarang
         </a>
       </div>
     </div>

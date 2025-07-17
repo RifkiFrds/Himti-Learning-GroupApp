@@ -6,7 +6,6 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
 
-  // Efek untuk mendeteksi scroll
   useEffect(() => {
     const handleScroll = () => {
       setHasScrolled(window.scrollY > 10);
@@ -23,7 +22,6 @@ const Navbar = () => {
     { title: 'Course', path: '/course' },
   ];
 
-  // Class styling menggunakan warna 'primary' dari tema Anda
   const linkBaseClass = "text-base font-medium transition-colors duration-300";
   const activeLinkClass = "text-primary";
   const inactiveLinkClass = "text-gray-600 hover:text-primary";
@@ -36,23 +34,16 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between h-20">
-          
-          {/* --- BAGIAN YANG DIPERBAIKI --- */}
+
           <NavLink to="/" className="flex-shrink-0">
             <div className="flex items-center gap-3">
               <img className="h-10 w-auto" src={himtiLogo} alt="HIMTI Learning Group" />
-              {/* REVISI: 
-                Class 'hidden' dan 'sm:block' dihapus.
-                Ukuran font diatur menjadi 'text-base' di mobile dan 'text-lg' di layar 'sm' ke atas
-                agar terlihat proporsional.
-              */}
-              <span className="font-bold text-base sm:text-lg text-secondary">
+              <span className="font-semibold text-gray-600 sm:text-lg">
                 HIMTI Learning Group
               </span>
             </div>
           </NavLink>
 
-          {/* Nav Links (Desktop) */}
           <div className="hidden md:flex md:items-center md:space-x-10">
             {navLinks.map((link) => (
               <NavLink
@@ -67,7 +58,6 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Tombol CTA (Desktop) */}
           <div className="hidden md:flex items-center gap-4">
             <a
               href="#"
@@ -76,7 +66,7 @@ const Navbar = () => {
               Login
             </a>
             <a
-              href="https://himti-lms.vercel.app/"
+              href="https://www.himtiumt.or.id/pendaftaran-kelompok-belajar"
               target="_blank"
               rel="noopener noreferrer"
               className="px-5 py-2.5 bg-primary text-white rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300 shadow-md hover:shadow-lg"
@@ -85,7 +75,6 @@ const Navbar = () => {
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -101,7 +90,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-white shadow-xl">
           <div className="px-2 pt-2 pb-4 space-y-1 sm:px-3">

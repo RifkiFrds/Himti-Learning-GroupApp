@@ -9,7 +9,6 @@ const Home = () => {
       <HeroSection />
       <StatsSection />
       <WhyJoinSection />
-      {/* Di sini Anda bisa menambahkan section lain seperti Testimoni atau Info HIMTI UMT */}
     </>
   );
 };

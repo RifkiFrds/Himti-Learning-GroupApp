@@ -1,4 +1,3 @@
-// src/Pages/Course.jsx
 import { useState, useEffect } from "react";
 import CourseCard from "../Components/Molecules/CourseCard";
 import { coursesData } from "../Data/courses";
@@ -8,18 +7,16 @@ const Course = () => {
   const [filteredCourses, setFilteredCourses] = useState(coursesData);
 
   useEffect(() => {
-    // Fungsi untuk memfilter course berdasarkan input pencarian
     const filtered = coursesData.filter(course =>
       course.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       course.description.toLowerCase().includes(searchQuery.toLowerCase())
     );
     setFilteredCourses(filtered);
-  }, [searchQuery]); // Efek ini akan berjalan setiap kali `searchQuery` berubah
+  }, [searchQuery]); 
 
   return (
     <div className="bg-gray-50 min-h-screen">
       <section className="container mx-auto px-5 py-24">
-        {/* Judul dan Search Bar */}
         <div className="flex flex-col text-center w-full mb-12">
           <h1 className="sm:text-4xl text-3xl font-bold title-font mb-4 text-secondary">
             Jelajahi Semua Course
@@ -38,7 +35,6 @@ const Course = () => {
           </div>
         </div>
 
-        {/* Grid untuk Kartu Course */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {filteredCourses.length > 0 ? (
             filteredCourses.map((course) => (
@@ -47,7 +43,7 @@ const Course = () => {
                 title={course.title}
                 description={course.description}
                 link={course.link}
-                thumbnailColor={course.thumbnailColor}
+                image={course.image}
               />
             ))
           ) : (

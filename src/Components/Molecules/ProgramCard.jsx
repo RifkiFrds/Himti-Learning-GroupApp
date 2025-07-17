@@ -35,7 +35,7 @@ const icons = {
 
 const ProgramCard = ({ icon, title, description, link }) => {
   return (
-    <div className="p-8 bg-white border border-gray-200 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+    <div className=" p-8 bg-white border border-gray-200 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
       <div className="flex flex-col items-start h-full">
         <div className="w-16 h-16 inline-flex items-center justify-center rounded-full bg-primary/10 text-primary mb-5">
           {icons[icon] || icons['web']}

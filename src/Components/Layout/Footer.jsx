@@ -5,11 +5,23 @@ const Footer = () => {
     <footer className="bg-secondary text-gray-300">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+
           <div className="md:col-span-1">
-            <img className="h-12 w-auto mb-4" src={himtiLogo} alt="HIMTI UMT" />
-            <p className="text-sm">
-              Platform belajar komunitas dari Himpunan Mahasiswa Teknik Informatika Universitas Muhammadiyah Tangerang.
-            </p>
+            <div className="flex flex-col md:flex-row md:items-center md:space-x-4">
+              <img
+                className="h-12 w-auto mb-4 md:mb-0"
+                src={himtiLogo}
+                alt="HIMTI UMT"
+              />
+              <div>
+                <span className="block font-semibold text-white text-base mb-1">
+                  HIMTI Learning Group
+                </span>
+                <p className="text-sm text-gray-300">
+                  Platform belajar komunitas dari Himpunan Mahasiswa Teknik Informatika Universitas Muhammadiyah Tangerang.
+                </p>
+              </div>
+            </div>
           </div>
 
           <div>
@@ -43,6 +55,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
+
         <div className="mt-8 border-t border-gray-700 pt-6 text-center text-sm">
           <p>&copy; {new Date().getFullYear()} HIMTI UMT. All rights reserved.</p>
         </div>

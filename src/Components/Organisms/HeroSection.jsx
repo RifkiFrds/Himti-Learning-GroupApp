@@ -1,10 +1,10 @@
 import heroIllustration from '../../assets/hero-illustration.png';
-import { Link } from 'react-router-dom'; // Tetap import Link untuk dioper ke Button
-import Button from '../Atoms/Button'; // <- 1. IMPORT KOMPONEN BUTTON
+import { Link } from 'react-router-dom'; 
+import Button from '../Atoms/Button'; 
 
 const HeroSection = () => {
   return (
-    <section className="relative bg-white overflow-hidden">
+    <section className="relative bg-white overflow-hidden animate-fade-in-up">
       <div className="container mx-auto flex min-h-screen max-w-screen-xl items-center px-4 py-20 sm:px-6 lg:py-24">
         <div className="grid w-full grid-cols-1 items-center gap-y-16 lg:grid-cols-2 lg:gap-x-16">
           
@@ -20,28 +20,16 @@ const HeroSection = () => {
               Platform komunitas untuk mahasiswa Teknik Informatika UMT. Tingkatkan skill, perluas jaringan, dan siapkan karir masa depanmu bersama kami.
             </p>
 
-            {/* --- REVISI DI SINI --- */}
             <div className="mt-10 flex flex-wrap items-center justify-center gap-4 lg:justify-start">
               
-              {/* 2. GUNAKAN BUTTON UNTUK "MULAI SEKARANG" */}
               <Button
-                variant="primary" // atau bisa dihapus karena 'primary' adalah default
+                variant="primary"
                 href="https://himti-lms.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Mulai Sekarang
               </Button>
-
-              {/* 3. GUNAKAN BUTTON UNTUK "LIHAT COURSE" */}
-              <Button
-                variant="secondary"
-                as={Link} // Render sebagai komponen Link
-                to="/course" // Gunakan 'to' karena ini adalah Link
-              >
-                Lihat Course
-              </Button>
-
             </div>
           </div>
 

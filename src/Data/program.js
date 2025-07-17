@@ -1,7 +1,7 @@
 export const programsData = [
   {
     id: 1,
-    icon: 'web', // kita akan ubah ini jadi komponen SVG
+    icon: 'web', 
     title: "Web Development",
     description: "Belajar membangun website interaktif dari awal menggunakan teknologi modern seperti React.js dan TailwindCSS.",
     link: "https://himti-lms.vercel.app/"
