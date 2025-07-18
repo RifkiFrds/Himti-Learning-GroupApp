@@ -1,5 +1,4 @@
 import heroIllustration from '../../assets/hero-illustration.png';
-import { Link } from 'react-router-dom'; 
 import Button from '../Atoms/Button'; 
 
 const HeroSection = () => {

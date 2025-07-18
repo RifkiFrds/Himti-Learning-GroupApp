@@ -1,4 +1,6 @@
 import himtiLogo from '../../assets/himti-logo.png';
+import { Link } from 'react-router-dom'; 
+import { FaInstagram, FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -7,7 +9,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
 
           <div className="md:col-span-1">
-            <div className="flex flex-col md:flex-row md:items-center md:space-x-4">
+            <div className="flex flex-col items-center text-center md:flex-row md:items-center md:space-x-4 md:text-left">
               <img
                 className="h-12 w-auto mb-4 md:mb-0"
                 src={himtiLogo}
@@ -24,35 +26,46 @@ const Footer = () => {
             </div>
           </div>
 
-          <div>
+          <div className="text-center md:text-left"> 
             <h3 className="text-white font-semibold tracking-wider">Tautan Cepat</h3>
             <ul className="mt-4 space-y-2">
-              <li><a href="/" className="hover:text-primary">Home</a></li>
-              <li><a href="/program" className="hover:text-primary">Program</a></li>
-              <li><a href="/course" className="hover:text-primary">Courses</a></li>
-              <li><a href="https://www.himtiumt.or.id/" target="_blank" rel="noopener noreferrer" className="hover:text-primary">Tentang HIMTI</a></li>
+              <li><Link to="/" className="hover:text-primary transition-colors">Home</Link></li>
+              <li><Link to="/program" className="hover:text-primary transition-colors">Program</Link></li>
+              <li><Link to="/course" className="hover:text-primary transition-colors">Courses</Link></li>
+              <li><a href="https://www.himtiumt.or.id/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Tentang HIMTI</a></li>
             </ul>
           </div>
 
-          <div>
+          <div className="text-center md:text-left"> 
             <h3 className="text-white font-semibold tracking-wider">Top Kategori</h3>
             <ul className="mt-4 space-y-2">
-              <li><a href="/program" className="hover:text-primary">Web Development</a></li>
-              <li><a href="/program" className="hover:text-primary">Mobile Development</a></li>
-              <li><a href="/program" className="hover:text-primary">UI/UX Design</a></li>
+              <li><Link to="/program" className="hover:text-primary transition-colors">Web Development</Link></li>
+              <li><Link to="/program" className="hover:text-primary transition-colors">Mobile Development</Link></li>
+              <li><Link to="/program" className="hover:text-primary transition-colors">UI/UX Design</Link></li>
             </ul>
           </div>
 
-          <div>
+          <div className="text-center md:text-left"> 
             <h3 className="text-white font-semibold tracking-wider">Hubungi Kami</h3>
             <ul className="mt-4 space-y-2">
-              <li className="flex items-center">
+              <li className="flex items-center justify-center md:justify-start"> 
                 <p>info.himti@umt.ac.id</p>
               </li>
-              <li className="flex items-center">
+              <li className="flex items-center justify-center md:justify-start"> 
                 <p>Universitas Muhammadiyah Tangerang</p>
               </li>
             </ul>
+            <div className="mt-4 flex space-x-5 justify-center md:justify-start">
+              <a href="https://www.instagram.com/himtiumt/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary transition-colors" aria-label="Instagram">
+                <FaInstagram size={25} />
+              </a>
+              <a href="https://github.com/himtiumt" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary transition-colors" aria-label="GitHub">
+                <FaGithub size={25} />
+              </a>
+              <a href="https://www.linkedin.com/company/himti-umt/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary transition-colors" aria-label="LinkedIn">
+                <FaLinkedin size={25} />
+              </a>
+            </div>
           </div>
         </div>
 

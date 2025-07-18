@@ -1,7 +1,7 @@
 import HeroSection from "../Components/Organisms/HeroSection";
 import StatsSection from "../Components/Organisms/StatsSection";
+import TestimonialSection from "../Components/Organisms/TestimonialSection";
 import WhyJoinSection from "../Components/Organisms/WhyJoinSection";
-
 
 const Home = () => {
   return (
@@ -9,6 +9,7 @@ const Home = () => {
       <HeroSection />
       <StatsSection />
       <WhyJoinSection />
+      <TestimonialSection />
     </>
   );
 };
