@@ -61,27 +61,16 @@ Dokumen ini bertujuan memberikan pemahaman menyeluruh mengenai arsitektur, tekno
 
 - **useState**  
   Mengelola state lokal.  
-  `const [isOpen, setIsOpen] = useState(false);`
 
 - **useEffect**  
   Menangani efek samping, contoh pencarian reaktif.
-  ```jsx
-  useEffect(() => {
-    const results = courses.filter(course =>
-      course.title.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-    setFilteredCourses(results);
-  }, [searchTerm]);
 
-### **useLocation**
-
+- **useLocation**
 Digunakan untuk memantau perubahan URL.
 
-```jsx
-const { pathname } = useLocation();
-useEffect(() => {
-  window.scrollTo(0, 0);
-}, [pathname]);
+- **useLocation**
+Digunakan untuk memantau perubahan URL.
+
 
 ### **3.3. Struktur Project**
 ├── public/
