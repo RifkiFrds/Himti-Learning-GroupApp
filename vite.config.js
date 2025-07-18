@@ -41,17 +41,17 @@ export default defineConfig({
         ],
      screenshots: [
           {
-            src: 'manifest-web.png', // path ke gambar di folder public
-            sizes: '1280x720', // ukuran gambar dalam piksel
+            src: 'manifest-web.png', 
+            sizes: '1280x720', 
             type: 'image/png',
-            form_factor: 'wide', // 'wide' untuk desktop/tablet
+            form_factor: 'wide', 
             label: 'Tampilan Desktop Aplikasi'
           },
           {
             src: 'manifest-mobile.png',
             sizes: '540x720',
             type: 'image/png',
-            form_factor: 'narrow', // 'narrow' untuk mobile
+            form_factor: 'narrow', 
             label: 'Tampilan Mobile Aplikasi'
           }
         ]

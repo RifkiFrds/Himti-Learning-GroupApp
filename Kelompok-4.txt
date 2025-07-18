@@ -1,1 +1,6 @@
 Project Name: Landing Page HIMTI Learning Group
+
+Tech Stack:
+- React JS
+- Tailwind CSS V3
+- PWA Vite

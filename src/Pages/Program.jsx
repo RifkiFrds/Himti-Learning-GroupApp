@@ -3,7 +3,7 @@ import { programsData } from "../Data/program";
 
 const Program = () => {
   return (
-    <div className="bg-gray-50">
+    <div className="bg-gray-50 animate-fade-in-up">
       <section className="container mx-auto px-5 py-24">
         <div className="flex flex-col text-center w-full mb-20">
           <h1 className="sm:text-4xl text-3xl font-bold title-font mb-4 text-secondary">
