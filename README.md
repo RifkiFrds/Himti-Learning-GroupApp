@@ -73,7 +73,7 @@ Digunakan untuk memantau perubahan URL.
 
 
 ### **3.3. Struktur Project**
-`
+```
 ├── public/
 ├── src/
 │   ├── assets/
@@ -95,6 +95,7 @@ Digunakan untuk memantau perubahan URL.
 ├── postcss.config.js
 ├── tailwind.config.js
 └── vite.config.js
+```
 
 ## **4. Panduan Menjalankan Proyek**
 
