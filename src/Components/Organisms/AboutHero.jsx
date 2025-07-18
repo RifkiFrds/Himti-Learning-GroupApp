@@ -1,6 +1,6 @@
 import { FaUsers, FaListAlt, FaBriefcase } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
 import MentorSection from './MentorSection';
+import Button from '../Atoms/Button'; 
 
 const AboutHero = () => {
   return (
@@ -120,14 +120,13 @@ const AboutHero = () => {
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Jadilah bagian dari komunitas kami dan tingkatkan skill digital Anda ke level selanjutnya.
           </p>
-          <Link
-            to="https://www.himtiumt.or.id/pendaftaran-kelompok-belajar"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-white text-primary font-bold px-8 py-3 rounded-lg hover:bg-gray-100 transition duration-300 shadow-lg"
-          >
-            Daftar Sekarang
-          </Link>
+        <Button
+          as="a"
+          href="https://www.himtiumt.or.id/pendaftaran-kelompok-belajar"
+          target="_blank"
+          rel="noopener noreferrer">
+          Daftar Sekarang
+          </Button>
         </section>
 
         <MentorSection />

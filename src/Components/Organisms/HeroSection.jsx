@@ -20,7 +20,6 @@ const HeroSection = () => {
             </p>
 
             <div className="mt-10 flex flex-wrap items-center justify-center gap-4 lg:justify-start">
-              
               <Button
                 variant="primary"
                 href="https://himti-lms.vercel.app/"
@@ -28,6 +27,15 @@ const HeroSection = () => {
                 rel="noopener noreferrer"
               >
                 Mulai Sekarang
+              </Button>
+
+              <Button
+                variant="secondary"
+                as='Link'
+                to="/course"
+                rel="noopener noreferrer"
+              >
+                Lihat Course
               </Button>
             </div>
           </div>
