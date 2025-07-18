@@ -106,12 +106,13 @@ Digunakan untuk memantau perubahan URL.
 
 ### **4.2. Instalasi & Menjalankan**
 
-``bash
+```bash
 git clone https://github.com/rifkifrds/himti-learning-groupapp.git
 cd himti-learning-groupapp
 
 npm install
 npm run dev
+```
 
 Buka [http://localhost:5173](http://localhost:5173) di browser.
 
