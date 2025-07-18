@@ -73,6 +73,7 @@ Digunakan untuk memantau perubahan URL.
 
 
 ### **3.3. Struktur Project**
+``
 ├── public/
 ├── src/
 │   ├── assets/
@@ -104,7 +105,7 @@ Digunakan untuk memantau perubahan URL.
 
 ### **4.2. Instalasi & Menjalankan**
 
-```bash
+``bash
 git clone https://github.com/rifkifrds/himti-learning-groupapp.git
 cd himti-learning-groupapp
 
