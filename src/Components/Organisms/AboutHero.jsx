@@ -121,6 +121,7 @@ const AboutHero = () => {
             Jadilah bagian dari komunitas kami dan tingkatkan skill digital Anda ke level selanjutnya.
           </p>
         <Button
+          variant="primary"
           as="a"
           href="https://www.himtiumt.or.id/pendaftaran-kelompok-belajar"
           target="_blank"
