@@ -23,9 +23,9 @@ const testimonialsData = [
     likes: 240,
     timestamp: '3:45 PM · 10 Jul 2025',
     socials: {
-      github: '#',
-      instagram: '#',
-      linkedin: '#'
+      github: 'https://github.com/RifkiFrds/',
+      instagram: 'https://www.instagram.com/frdskii_/',
+      linkedin: 'https://www.linkedin.com/in/muhamad-rifkifrds/'
     }
   },
   {
