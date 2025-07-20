@@ -8,22 +8,7 @@ Dokumen ini bertujuan memberikan pemahaman menyeluruh mengenai arsitektur, tekno
 
 ---
 
-## **1. Visi & Tujuan Proyek**
-
-**HIMTI Learning Group** adalah inisiatif dari **Himpunan Mahasiswa Teknik Informatika UMT** untuk menciptakan ekosistem belajar kolaboratif. Aplikasi web ini dirancang untuk:
-
-- **Menjadi Pusat Informasi**  
-  Menyediakan sumber informasi terstruktur mengenai program, jadwal, dan materi belajar.
-
-- **Meningkatkan Keterlibatan**  
-  Mendorong mahasiswa untuk bergabung dan berpartisipasi aktif dalam kegiatan.
-
-- **Membangun Portofolio Digital**  
-  Menampilkan hasil karya dan profil para mentor serta anggota sebagai portofolio.
-
----
-
-## **2. Fitur Utama & Keunggulan Teknis**
+## **1. Fitur Utama & Keunggulan Teknis**
 
 - **Desain Responsif (Mobile-First)**  
   Menggunakan **Tailwind CSS** untuk memastikan tampilan optimal di semua perangkat.
@@ -44,9 +29,9 @@ Dokumen ini bertujuan memberikan pemahaman menyeluruh mengenai arsitektur, tekno
 
 ---
 
-## **3. Arsitektur & Teknologi**
+## **2. Arsitektur & Teknologi**
 
-### **3.1. Tech Stack**
+### **2.1. Tech Stack**
 
 | **Kategori**   | **Teknologi**         | **Fungsi Utama**                                |
 |----------------|-----------------------|-------------------------------------------------|
@@ -57,7 +42,7 @@ Dokumen ini bertujuan memberikan pemahaman menyeluruh mengenai arsitektur, tekno
 | PWA            | Vite PWA Plugin       | PWA support via service worker & manifest       |
 | Icons          | React Icons           | Ikon populer dalam bentuk komponen React        |
 
-### **3.2. Pemanfaatan React Hooks**
+### **2.2. Pemanfaatan React Hooks**
 
 - **useState**  
   Mengelola state lokal.  
@@ -72,7 +57,7 @@ Digunakan untuk memantau perubahan URL.
 Digunakan untuk memantau perubahan URL.
 
 
-### **3.3. Struktur Project**
+### **2.3. Struktur Project**
 ```
 ├── public/
 ├── src/
@@ -97,14 +82,14 @@ Digunakan untuk memantau perubahan URL.
 └── vite.config.js
 ```
 
-## **4. Panduan Menjalankan Proyek**
+## **3. Panduan Menjalankan Proyek**
 
-### **4.1. Prasyarat**
+### **3.1. Prasyarat**
 
 - **Node.js** (versi 18.x atau lebih)
 - **npm** / **yarn** / **pnpm**
 
-### **4.2. Instalasi & Menjalankan**
+### **3.2. Instalasi & Menjalankan**
 
 ```bash
 git clone https://github.com/rifkifrds/himti-learning-groupapp.git
@@ -116,7 +101,7 @@ npm run dev
 
 Buka [http://localhost:5173](http://localhost:5173) di browser.
 
-### **4.3. Skrip Tersedia**
+### **3.3. Skrip Tersedia**
 
 - `npm run dev` : Mode pengembangan
 - `npm run build` : Build produksi (`/dist`)
@@ -125,7 +110,7 @@ Buka [http://localhost:5173](http://localhost:5173) di browser.
 
 ---
 
-## **5. Referensi & Apresiasi**
+## **4. Referensi & Apresiasi**
 
 - **Tailwind CSS**
 - **Preline UI**

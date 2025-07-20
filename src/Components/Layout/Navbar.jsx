@@ -18,7 +18,7 @@ const Navbar = () => {
 
   const navLinks = [
     { title: 'Home', path: '/' },
-     { title: 'About', path: '/about' },
+    { title: 'About', path: '/about' },
     { title: 'Program', path: '/program' },
     { title: 'Course', path: '/course' },
   ];
@@ -61,7 +61,7 @@ const Navbar = () => {
 
           <div className="hidden md:flex items-center gap-4">
             <a
-              href="#"
+              href="*"
               className="font-semibold text-gray-600 hover:text-primary transition-colors"
             >
               Login
