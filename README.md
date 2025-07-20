@@ -53,10 +53,6 @@ Dokumen ini bertujuan memberikan pemahaman menyeluruh mengenai arsitektur, tekno
 - **useLocation**
 Digunakan untuk memantau perubahan URL.
 
-- **useLocation**
-Digunakan untuk memantau perubahan URL.
-
-
 ### **2.3. Struktur Project**
 ```
 ├── public/
