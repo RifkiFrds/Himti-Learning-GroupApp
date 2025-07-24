@@ -1,10 +1,10 @@
 import React from 'react'
-import CourseSection from '../components/Organisms/CourseSection'
+import CourseHero from '../components/Organisms/CourseHero'
 
 function Course() {
   return (
     <>
-    <CourseSection />
+    <CourseHero/>
     </>
   )
 }

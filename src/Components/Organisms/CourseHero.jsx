@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import CourseCard from "../Molecules/CourseCard";
 import { coursesData } from "../../data/courses";
 
-const CourseSection = () => {
+const CourseHero = () => {
   // mendefinisikan state untuk menyimpan query pencarian dan daftar course yang difilter
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredCourses, setFilteredCourses] = useState(coursesData);
@@ -60,4 +60,4 @@ const CourseSection = () => {
   );
 };
 
-export default CourseSection
+export default CourseHero
