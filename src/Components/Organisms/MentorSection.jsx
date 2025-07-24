@@ -1,4 +1,4 @@
-import { mentorsData } from '../../data/mentors';
+import { mentorsData } from '../../Data/mentors';
 import MentorCard from '../Molecules/MentorCard';
 import Button from '../Atoms/Button';
 

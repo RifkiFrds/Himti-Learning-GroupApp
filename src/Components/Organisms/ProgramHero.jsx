@@ -1,5 +1,5 @@
 import React from 'react'
-import { programsData } from '../../data/programs';
+import { programsData } from '../../Data/programs';
 import ProgramCard from '../Molecules/ProgramCard';
 
 const ProgramHero = () => {
