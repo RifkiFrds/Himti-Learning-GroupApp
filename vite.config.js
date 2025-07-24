@@ -15,7 +15,7 @@ export default defineConfig({
       manifest: {
         name: 'HIMTI Learning Group',
         short_name: 'HIMTI Learn',
-        description: 'Platform komunitas untuk mahasiswa Teknik Informatika UMT untuk belajar bersama.',
+        description: 'Platform Kelompok Belajar mahasiswa Teknik Informatika UMT untuk belajar bersama.',
         theme_color: '#8B5CF6', 
         background_color: '#ffffff',
         display: 'standalone',
