@@ -4,7 +4,7 @@ import Button from '../Atoms/Button';
 const HeroSection = () => {
   return (
     <section className="relative bg-white overflow-hidden animate-fade-in-up">
-      <div className="container mx-auto flex min-h-screen max-w-screen-xl items-center px-4 py-20 sm:px-6 lg:py-24">
+      <div className="container mx-auto flex min-h-screen items-center px-4 pt-1 pb-12 sm:px-6">
         <div className="grid w-full grid-cols-1 items-center gap-y-16 lg:grid-cols-2 lg:gap-x-16">
           
           <div className="text-center lg:text-left">
