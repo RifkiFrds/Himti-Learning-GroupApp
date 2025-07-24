@@ -4,7 +4,7 @@ import TestimonialSection from "../components/Organisms/TestimonialSection";
 import WhyJoinSection from "../components/Organisms/WhyJoinSection";
 import MentorSection from "../components/Organisms/MentorSection";
 
-const Home = () => {
+function Home() {
   return (
     <>
       <HeroSection />
@@ -13,7 +13,7 @@ const Home = () => {
       <MentorSection limit={4} showCTA={true} />
       <TestimonialSection />
     </>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
