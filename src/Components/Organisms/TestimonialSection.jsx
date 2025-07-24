@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaGithub, FaInstagram, FaLinkedin, FaHeart } from 'react-icons/fa';
-import { testimonialData } from '../../data/tetimonial';
+import { testimonialData } from '../../Data/tetimonial';
 
 const TestimonialSection = () => {
   return (

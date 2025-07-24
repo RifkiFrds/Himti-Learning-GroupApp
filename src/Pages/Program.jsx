@@ -1,5 +1,5 @@
 import React from 'react'
-import ProgramHero from '../components/Organisms/ProgramHero';
+import ProgramHero from '../Components/Organisms/ProgramHero';
 
 function Program() {
   return (

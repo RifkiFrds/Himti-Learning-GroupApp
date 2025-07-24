@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from "react";
 import CourseCard from "../Molecules/CourseCard";
-import { coursesData } from "../../data/courses";
+import { coursesData } from "../../Data/courses";
 
 const CourseHero = () => {
   // mendefinisikan state untuk menyimpan query pencarian dan daftar course yang difilter

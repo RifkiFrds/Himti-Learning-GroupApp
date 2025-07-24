@@ -1,5 +1,5 @@
 import React from 'react'
-import AboutHero from '../components/Organisms/AboutHero'
+import AboutHero from '../Components/Organisms/AboutHero'
 
 function About() {
   return (

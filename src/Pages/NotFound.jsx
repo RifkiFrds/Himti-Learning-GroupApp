@@ -1,5 +1,5 @@
 import React from 'react'
-import NotFoundHero from '../components/Organisms/NotFoundHero';
+import NotFoundHero from '../Components/Organisms/NotFoundHero';
 
 function NotFound() {
   return (
