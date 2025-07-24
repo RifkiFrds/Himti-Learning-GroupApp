@@ -3,9 +3,11 @@ import CourseCard from "../components/Molecules/CourseCard";
 import { coursesData } from "../data/courses";
 
 const Course = () => {
+  // mendefinisikan state untuk menyimpan query pencarian dan daftar course yang difilter
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredCourses, setFilteredCourses] = useState(coursesData);
 
+  // menggunakan efek untuk memperbarui daftar course yang difilter berdasarkan query pencarian
   useEffect(() => {
     const filtered = coursesData.filter(course =>
       course.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
