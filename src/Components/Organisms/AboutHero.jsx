@@ -129,8 +129,9 @@ const AboutHero = () => {
           Daftar Sekarang
           </Button>
         </section>
-
-        <MentorSection />
+        <div id="mentorsection">
+          <MentorSection showCTA={false} />
+        </div>
       </main>
     </>
   );

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import CourseCard from "../Components/Molecules/CourseCard";
-import { coursesData } from "../Data/courses";
+import CourseCard from "../components/Molecules/CourseCard";
+import { coursesData } from "../data/courses";
 
 const Course = () => {
   const [searchQuery, setSearchQuery] = useState("");

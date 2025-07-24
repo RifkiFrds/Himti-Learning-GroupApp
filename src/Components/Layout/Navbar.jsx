@@ -2,10 +2,12 @@ import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import himtiLogo from '../../assets/himti-logo.png';
 
+// Mendefinisikan komponen Navbar yang mencakup tautan navigasi dan responsif untuk perangkat mobile.
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
 
+  // Menggunakan efek untuk mengubah status navbar ketika pengguna menggulir halaman
   useEffect(() => {
     const handleScroll = () => {
       setHasScrolled(window.scrollY > 10);

@@ -1,4 +1,4 @@
-import ProgramCard from "../Components/Molecules/ProgramCard";
+import ProgramCard from "../components/Molecules/ProgramCard";
 import { programsData } from "../Data/program";
 
 const Program = () => {

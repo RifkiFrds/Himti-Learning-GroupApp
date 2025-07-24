@@ -1,4 +1,4 @@
-import Button from '../Components/Atoms/Button'
+import Button from '../components/Atoms/Button'
 
 function NotFound() {
   return (

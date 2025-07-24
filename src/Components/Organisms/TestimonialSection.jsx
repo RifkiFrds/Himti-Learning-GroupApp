@@ -1,7 +1,6 @@
 import React from 'react';
 import { FaGithub, FaInstagram, FaLinkedin, FaHeart } from 'react-icons/fa';
-import { testimonialData } from '../../Data/tetimonial';
-
+import { testimonialData } from '../../data/tetimonial';
 
 const TestimonialSection = () => {
   return (
@@ -17,7 +16,6 @@ const TestimonialSection = () => {
         </div>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-
           {testimonialData.map((testimonial, index) => (
             <div key={index} className="p-6 bg-white rounded-lg shadow-md transition-transform hover:shadow-lg hover:-translate-y-1">
               <div className="flex items-start mb-4">

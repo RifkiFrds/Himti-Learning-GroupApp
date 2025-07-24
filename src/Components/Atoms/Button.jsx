@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+// Mendefiniskan button komponen yang dapat digunakan sebagai tautan atau tombol biasa, dengan varian primary dan secondary
 const Button = ({ 
   as = 'a', 
   children, 

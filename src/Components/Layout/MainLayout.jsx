@@ -2,6 +2,7 @@ import { Outlet } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
 
+// Mendefinisikan layout utama yang mencakup navbar, konten utama, dan footer
 const MainLayout = () => {
   return (
     <div className="bg-gray-50 font-sans text-secondary">

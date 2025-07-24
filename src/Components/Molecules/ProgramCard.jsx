@@ -1,12 +1,5 @@
 import { Link } from 'react-router-dom';
-import { 
-  FaCode,         
-  FaMobileAlt,    
-  FaPalette,      
-  FaNetworkWired, 
-  FaBookOpen,     
-  FaUsers         
-} from 'react-icons/fa';
+import { FaCode, FaMobileAlt, FaPalette, FaNetworkWired, FaBookOpen, FaUsers } from 'react-icons/fa';
 import { HiArrowRight } from "react-icons/hi";
 
 const icons = {

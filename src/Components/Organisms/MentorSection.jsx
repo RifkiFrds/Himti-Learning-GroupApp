@@ -1,7 +1,11 @@
-import { mentorsData } from '../../Data/mentors';
+import { mentorsData } from '../../data/mentors';
 import MentorCard from '../Molecules/MentorCard';
+import Button from '../Atoms/Button';
 
-const MentorSection = () => {
+const MentorSection = ({ limit, showCTA = true }) => {
+
+  // jika limit diberikan, hanya tampilkan sejumlah mentor sesuai limit
+  const visibleMentors = limit ? mentorsData.slice(0, limit) : mentorsData;
   return (
     <section className="bg-white dark:bg-gray-900">
       <div className="container px-6 py-10 mx-auto">
@@ -14,12 +18,20 @@ const MentorSection = () => {
         </p>
 
         <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-16 md:grid-cols-2">
-          
-          {mentorsData.map((mentor) => (
+           {visibleMentors.map((mentor) => (
             <MentorCard key={mentor.id} mentor={mentor} />
           ))}
 
         </div>
+         {showCTA && (
+          <div className="flex justify-center mt-10">
+          <Button
+          variant="secondary"
+          as="Link"
+          to="/about#mentorsection"
+          >Lihat Semua Mentor</Button>
+          </div>
+        )}
       </div>
     </section>
   );
