@@ -64,6 +64,7 @@ const Navbar = () => {
           <div className="hidden md:flex items-center gap-4">
             <a
               href="https://himti-lms.vercel.app/sign-in"
+              target="_blank"
               className="font-semibold text-gray-600 hover:text-primary transition-colors"
             >
               Login
