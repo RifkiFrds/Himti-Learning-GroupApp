@@ -63,13 +63,13 @@ const Navbar = () => {
 
           <div className="hidden md:flex items-center gap-4">
             <a
-              href="*"
+              href="https://himti-lms.vercel.app/sign-in"
               className="font-semibold text-gray-600 hover:text-primary transition-colors"
             >
               Login
             </a>
             <a
-              href="https://www.himtiumt.or.id/pendaftaran-kelompok-belajar"
+              href="https://himti-lms.vercel.app/sign-up"
               target="_blank"
               rel="noopener noreferrer"
               className="px-5 py-2.5 bg-primary text-white rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300 shadow-md hover:shadow-lg"
