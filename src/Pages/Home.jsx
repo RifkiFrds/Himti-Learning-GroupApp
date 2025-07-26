@@ -4,7 +4,7 @@ import TestimonialSection from "../Components/Organisms/TestimonialSection";
 import WhyJoinSection from "../Components/Organisms/WhyJoinSection";
 import MentorSection from "../Components/Organisms/MentorSection";
 
-function Home() {
+const Home = () => {
   return (
     <>
       <HeroSection />
