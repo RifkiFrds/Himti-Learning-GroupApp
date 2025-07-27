@@ -1,11 +1,15 @@
 import React from 'react';
-import { FaRobot, FaTimes, FaExpandAlt, FaCompressAlt } from 'react-icons/fa';
+import { FaTimes, FaExpandAlt, FaCompressAlt, FaBars } from 'react-icons/fa';
+import avatarMain from '../../assets/images/avatar-main.png'; // 1. Impor avatar utama
 
-const ChatHeader = ({ isMaximized, onToggleMaximize, onToggleChat }) => {
+const ChatHeader = ({ isMaximized, onToggleMaximize, onToggleChat, onToggleSidebar }) => {
   return (
-    <div className="p-4 bg-primary text-white rounded-t-2xl flex justify-between items-center cursor-grab">
+    <div className="p-4 bg-primary text-white rounded-t-none md:rounded-t-2xl flex justify-between items-center cursor-grab flex-shrink-0">
       <div className="flex items-center gap-3 text-lg font-bold">
-        <FaRobot size={22} />
+        <button onClick={onToggleSidebar} className="hover:opacity-75" aria-label="Toggle Sidebar">
+          <FaBars size={20} />
+        </button>
+        <img src={avatarMain} alt="HIMTI-Bot Avatar" className="w-10 h-10" />
         HIMTIChat
       </div>
       <div className="flex items-center gap-4">

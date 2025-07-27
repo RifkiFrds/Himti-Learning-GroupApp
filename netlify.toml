@@ -1,2 +1,5 @@
 [build]
   functions = "netlify/functions"
+
+[functions."getAIResponse"]
+  timeout = 60
