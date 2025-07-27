@@ -90,7 +90,6 @@ const Navbar = () => {
               </svg>
             </button>
           </div>
-
         </div>
       </div>
 
@@ -125,6 +124,7 @@ const Navbar = () => {
               Daftar Sekarang
             </a>
           </div>
+          
         </div>
       )}
     </nav>
