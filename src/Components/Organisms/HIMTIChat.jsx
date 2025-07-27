@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { FaRobot, FaCommentDots, FaTimes } from 'react-icons/fa';
 
-
 const HIMTIChat = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [prompt, setPrompt] = useState('');
