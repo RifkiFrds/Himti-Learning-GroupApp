@@ -6,10 +6,10 @@ import ChatInputForm from '../Molecules/ChatInputForm';
 import ChatSidebar from '../Molecules/ChatSidebar';
 
 const HIMTIChat = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [isMaximized, setIsMaximized] = useState(false);
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   
   const [conversations, setConversations] = useState(() => {
     const saved = localStorage.getItem('himtiConversations');
@@ -20,7 +20,7 @@ const HIMTIChat = () => {
     }];
   });
   const [activeConversationId, setActiveConversationId] = useState(() => conversations[0]?.id);
-  const [searchTerm, setSearchTerm] = useState(''); // State untuk search
+  const [searchTerm, setSearchTerm] = useState(''); 
   
   const chatEndRef = useRef(null);
 
@@ -69,7 +69,6 @@ const HIMTIChat = () => {
   };
 
   const handleSubmit = async (prompt) => {
-    // ... (Logika handleSubmit tetap sama, tidak perlu diubah)
     if (!prompt.trim()) return;
     const newUserMessage = { sender: 'user', text: prompt };
     const updatedConversations = conversations.map(convo => {
@@ -109,7 +108,6 @@ const HIMTIChat = () => {
   };
 
   const handleFeedback = (messageIndex, feedbackType) => {
-    // ... (Logika handleFeedback tetap sama, tidak perlu diubah)
     const updatedConversations = conversations.map(convo => {
       if (convo.id === activeConversationId) {
         const newMessages = [...convo.messages];
