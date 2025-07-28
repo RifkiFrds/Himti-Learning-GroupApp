@@ -4,7 +4,7 @@ import { FaThumbsUp, FaThumbsDown, FaCheckCircle } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 import ReactMarkdown from 'react-markdown';
 import FeedbackPopup from './FeedbackPopup';
-import avatarSmile from '../../assets/images/avatar-smile.png';
+import avatarMain from '../../assets/images/avatar-main.png';
 import avatarThinking from '../../assets/images/avatar-thinking.png';
 
 const ChatBody = ({ chatHistory, isLoading, chatEndRef, onFeedback }) => {
@@ -42,7 +42,7 @@ const ChatBody = ({ chatHistory, isLoading, chatEndRef, onFeedback }) => {
               className={`flex items-start gap-3 mb-3 ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}
             >
               {msg.sender === 'ai' && (
-                <img src={avatarSmile} alt="Avatar" className="w-12 h-10 rounded-full flex-shrink-0" />
+                <img src={avatarMain} alt="Avatar" className="w-10 h-10 rounded-full flex-shrink-0" />
               )}
               <div className={`flex flex-col ${msg.sender === 'user' ? 'items-end' : 'items-start'}`}>
                 <div className={`py-2 px-3 rounded-xl max-w-md break-words mb-1 
@@ -80,7 +80,7 @@ const ChatBody = ({ chatHistory, isLoading, chatEndRef, onFeedback }) => {
                 animate={{ opacity: 1, y: 0 }}
                 className="flex items-center gap-3 mb-3"
             >
-                <img src={avatarThinking} alt="Avatar Berpikir" className="w-12 h-10 rounded-full" />
+                <img src={avatarThinking} alt="Avatar Berpikir" className="w-18 h-14 rounded-full" />
                 <div className="p-3 rounded-xl bg-gray-200 text-secondary">
                     <div className="flex items-center gap-1 text-xs">
                         <motion.span animate={{ y: [0, -2, 0] }} transition={{ duration: 0.8, repeat: Infinity, ease: "easeInOut" }}>●</motion.span>
