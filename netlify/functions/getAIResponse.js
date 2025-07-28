@@ -1,6 +1,5 @@
 import Replicate from "replicate";
 
-// Library 'replicate' secara otomatis akan mencari process.env.REPLICATE_API_TOKEN
 const replicate = new Replicate();
 
 export const handler = async (event) => {
@@ -29,7 +28,7 @@ export const handler = async (event) => {
       {
         input: {
           prompt: prompt,
-          max_length: 20, 
+          max_length: 100, 
           min_tokens: 0,
           temperature: 0.7,
           presence_penalty: 0,
