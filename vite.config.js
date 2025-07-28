@@ -1,61 +1,70 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import { VitePWA } from 'vite-plugin-pwa'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import { VitePWA } from 'vite-plugin-pwa';
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [
     react(),
     VitePWA({
       registerType: 'autoUpdate',
       injectRegister: 'auto',
-      workbox: {
-        globPatterns: ['**/*.{js,css,html,ico,png,svg}']
-      },
       manifest: {
+        id: '/',
         name: 'HIMTI Learning Group',
         short_name: 'HIMTI Learn',
         description: 'Platform Kelompok Belajar mahasiswa Teknik Informatika UMT untuk belajar bersama.',
-        theme_color: '#8B5CF6', 
-        background_color: '#ffffff',
-        display: 'standalone',
-        scope: '/',
         start_url: '/',
+        scope: '/',
+        display: 'standalone',
+        background_color: '#ffffff',
+        theme_color: '#8B5CF6',
         icons: [
           {
-            src: 'himti-192x192.png',
+            src: '/icons/icon-144x144.png',
+            sizes: '144x144',
+            type: 'image/png',
+            purpose: 'any', 
+          },
+          {
+            src: '/icons/icon-192x192.png',
             sizes: '192x192',
-            type: 'image/png'
+            type: 'image/png',
+            purpose: 'any', 
           },
           {
-            src: 'himti-512x512.png',
-            sizes: '512x512',
-            type: 'image/png'
-          },
-          {
-            src: 'pwa-512x512.png',
+            src: '/icons/icon-512x512.png',
             sizes: '512x512',
             type: 'image/png',
-            purpose: 'any maskable'
-          }
+            purpose: 'any', 
+          },
+          {
+            src: '/icons/icon-512x512.png', 
+            sizes: '512x512',
+            type: 'image/png',
+            purpose: 'maskable',
+          },
         ],
-     screenshots: [
+        screenshots: [
           {
-            src: 'manifest-web.png', 
-            sizes: '1280x720', 
+            src: '/screenshots/desktop.png',
+            sizes: '1280x720',
             type: 'image/png',
-            form_factor: 'wide', 
-            label: 'Tampilan Desktop Aplikasi'
+            form_factor: 'wide',
+            label: 'Tampilan Desktop',
           },
           {
-            src: 'manifest-mobile.png',
+            src: '/screenshots/mobile.png',
             sizes: '540x720',
             type: 'image/png',
-            form_factor: 'narrow', 
-            label: 'Tampilan Mobile Aplikasi'
-          }
+            form_factor: 'narrow',
+            label: 'Tampilan Mobile',
+          },
         ]
+      },
+      workbox: {
+        globPatterns: ['**/*.{js,css,html,ico,png,svg}'],
+        cleanupOutdatedCaches: true,
       }
     })
-  ],
-})
+  ]
+});
