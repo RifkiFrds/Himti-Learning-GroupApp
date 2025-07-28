@@ -14,7 +14,7 @@ const HIMTIChat = () => {
   // State yang bertanggung jawab HANYA untuk UI
   const [isOpen, setIsOpen] = useState(false);
   const [isMaximized, setIsMaximized] = useState(false);
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   
   // Memanggil hook untuk mendapatkan semua data dan fungsi logika
   const {
