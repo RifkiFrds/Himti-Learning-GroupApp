@@ -1,6 +1,7 @@
 import React from 'react';
-import { FaCode, FaPython, FaCloud, FaBook } from 'react-icons/fa';
+import { FaCode, FaPython, FaCloud, FaBook, FaChevronRight } from 'react-icons/fa';
 import { suggestionData } from '../../Data/suggestionPrompts';
+import { motion } from 'framer-motion';
 
 const icons = {
   FaCode: <FaCode className="text-blue-500" />,
@@ -11,21 +12,28 @@ const icons = {
 
 const SuggestionPanel = ({ onSuggestionClick }) => {
   return (
-    <div className="mb-3">
-      <p className="text-xs font-semibold text-gray-500 mb-2">Mulai dengan salah satu:</p>
-      <div className="flex flex-col gap-2">
+    <div className="mb-4">
+      <p className="text-xs font-bold text-gray-500 mb-2 px-1">Mulai Percakapan</p>
+      <div className="flex items-center space-x-2 overflow-x-auto pb-2 -mx-3 px-3">
         {suggestionData.map((suggestion, index) => (
-          <button
+          <motion.button
             key={index}
             onClick={() => onSuggestionClick(suggestion.prompt)}
-            className="w-full flex items-center gap-3 text-left p-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors"
+            className="flex-shrink-0 w-48 p-3 rounded-xl bg-gradient-to-br from-gray-50 to-white border border-gray-200 shadow-sm text-left hover:shadow-lg hover:-translate-y-1 transition-all duration-200"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
-            <div className="p-2 bg-white rounded-md shadow-sm">{icons[suggestion.iconName]}</div>
-            <div className="flex-grow">
-              <p className="text-sm font-bold text-secondary">{suggestion.title}</p>
-              <p className="text-xs text-gray-500">{suggestion.description}</p>
+            <div className="flex items-center justify-between mb-2">
+              <div className="p-2 bg-white rounded-full shadow-sm">
+                {icons[suggestion.iconName]}
+              </div>
+              <FaChevronRight className="text-gray-300" />
             </div>
-          </button>
+            <div>
+              <p className="text-sm font-bold text-secondary">{suggestion.title}</p>
+              <p className="text-xs text-gray-500 mt-1">{suggestion.description}</p>
+            </div>
+          </motion.button>
         ))}
       </div>
     </div>

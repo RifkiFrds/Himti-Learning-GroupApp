@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import CodeBlock from './CodeBlock';
 import { FaThumbsUp, FaThumbsDown, FaCheckCircle } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
+import ReactMarkdown from 'react-markdown';
+import FeedbackPopup from './FeedbackPopup';
 import avatarSmile from '../../assets/images/avatar-smile.png';
 import avatarThinking from '../../assets/images/avatar-thinking.png';
-import FeedbackPopup from './FeedbackPopup'; 
 
 const ChatBody = ({ chatHistory, isLoading, chatEndRef, onFeedback }) => {
   const [feedbackPopup, setFeedbackPopup] = useState({ isOpen: false, messageIndex: null });
@@ -41,14 +42,19 @@ const ChatBody = ({ chatHistory, isLoading, chatEndRef, onFeedback }) => {
               className={`flex items-start gap-3 mb-3 ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}
             >
               {msg.sender === 'ai' && (
-                <img src={avatarSmile} alt="Avatar" className="w-8 h-8 rounded-full flex-shrink-0" />
+                <img src={avatarSmile} alt="Avatar" className="w-12 h-10 rounded-full flex-shrink-0" />
               )}
               <div className={`flex flex-col ${msg.sender === 'user' ? 'items-end' : 'items-start'}`}>
-                <div className={`py-2 px-3 rounded-xl max-w-md break-words mb-1 ${msg.sender === 'user' ? 'bg-secondary text-white' : 'bg-gray-200 text-secondary'}`}>
+                <div className={`py-2 px-3 rounded-xl max-w-md break-words mb-1 
+                ${msg.sender === 'user' 
+                    ? 'bg-gradient-to-br from-primary to-purple-700 text-white' 
+                    : 'bg-white text-secondary'}`}>
                   {msg.text.split(/(```[\s\S]*?```)/g).filter(Boolean).map((part, i) =>
                     part.startsWith('```') && part.endsWith('```')
                       ? <CodeBlock key={i} code={part.slice(3, -3).trim()} />
-                      : <p key={i} className="text-sm whitespace-pre-wrap">{part}</p>
+                      : <div key={i} className={`prose prose-sm max-w-none ${msg.sender === 'user' && 'prose-invert'}`}>
+                          <ReactMarkdown>{part}</ReactMarkdown>
+                        </div>
                   )}
                 </div>
                 {msg.sender === 'ai' && (
@@ -74,7 +80,7 @@ const ChatBody = ({ chatHistory, isLoading, chatEndRef, onFeedback }) => {
                 animate={{ opacity: 1, y: 0 }}
                 className="flex items-center gap-3 mb-3"
             >
-                <img src={avatarThinking} alt="Avatar Berpikir" className="w-8 h-8 rounded-full" />
+                <img src={avatarThinking} alt="Avatar Berpikir" className="w-12 h-10 rounded-full" />
                 <div className="p-3 rounded-xl bg-gray-200 text-secondary">
                     <div className="flex items-center gap-1 text-xs">
                         <motion.span animate={{ y: [0, -2, 0] }} transition={{ duration: 0.8, repeat: Infinity, ease: "easeInOut" }}>●</motion.span>

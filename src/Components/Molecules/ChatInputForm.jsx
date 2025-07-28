@@ -3,11 +3,10 @@ import { FaPaperPlane, FaMicrophone } from 'react-icons/fa';
 
 const ChatInputForm = ({ onSubmit, isLoading }) => {
   const [prompt, setPrompt] = useState('');
-  const [isListening, setIsListening] = useState(false); // State untuk status mendengarkan
-  const recognitionRef = useRef(null); // Ref untuk menyimpan instance SpeechRecognition
+  const [isListening, setIsListening] = useState(false);
+  const recognitionRef = useRef(null);
   const textareaRef = useRef(null);
 
-  // Setup SpeechRecognition saat komponen pertama kali dimuat
   useEffect(() => {
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
     if (!SpeechRecognition) {
@@ -16,9 +15,9 @@ const ChatInputForm = ({ onSubmit, isLoading }) => {
     }
 
     const recognition = new SpeechRecognition();
-    recognition.continuous = true; // Terus mendengarkan
-    recognition.interimResults = true; // Dapatkan hasil sementara
-    recognition.lang = 'id-ID'; // Set bahasa ke Indonesia
+    recognition.continuous = true;
+    recognition.interimResults = true;
+    recognition.lang = 'id-ID';
 
     recognition.onresult = (event) => {
       let finalTranscript = '';
@@ -27,7 +26,6 @@ const ChatInputForm = ({ onSubmit, isLoading }) => {
           finalTranscript += event.results[i][0].transcript;
         }
       }
-      // Tambahkan hasil transkrip ke prompt yang sudah ada
       if (finalTranscript) {
         setPrompt(prevPrompt => prevPrompt.trim() + ' ' + finalTranscript);
       }
@@ -45,7 +43,6 @@ const ChatInputForm = ({ onSubmit, isLoading }) => {
     recognitionRef.current = recognition;
   }, []);
 
-  // Fungsi untuk memulai atau menghentikan rekaman suara
   const handleListen = () => {
     if (isListening) {
       recognitionRef.current?.stop();
@@ -88,15 +85,14 @@ const ChatInputForm = ({ onSubmit, isLoading }) => {
         }}
       />
       
-      {/* Tombol Mikrofon Baru */}
       <button
         type="button"
         onClick={handleListen}
         disabled={isLoading}
-        className={`p-3 text-white font-bold rounded-lg transition-colors self-stretch flex items-center ${
+        className={`p-3 rounded-lg transition-colors self-stretch flex items-center ${
           isListening 
-            ? 'bg-red-500 animate-pulse' 
-            : 'bg-secondary hover:bg-gray-600'
+          ? 'bg-primary text-white animate-pulse' 
+          : 'bg-gray-400 text-white hover:bg-gray-200'
         }`}
         aria-label="Gunakan Mikrofon"
       >
