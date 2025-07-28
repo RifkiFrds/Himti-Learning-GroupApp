@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaBars, FaDownload, FaVolumeUp, FaVolumeMute, FaExpandAlt, FaCompressAlt, FaTimes } from 'react-icons/fa';
 import SpeedDial from './SpeedDial';
+import AvatarMain  from '../../assets/images/avatar-main.png'
 
 const ChatHeader = ({ 
   isMaximized, 
@@ -25,12 +26,11 @@ const ChatHeader = ({
         <button onClick={onToggleSidebar} className="hover:opacity-75" aria-label="Toggle Sidebar">
           <FaBars size={20} />
         </button>
-        <img src="/src/assets/images/avatar-main.png" alt="HIMTI-Bot Avatar" className="w-12 h-10" />
+        <img src={AvatarMain} alt="HIMTI-Bot Avatar" className="w-12 h-10" />
         HIMTIChat
       </div>
       
       <div className="md:hidden">
-        {/* Beri tahu Speed Dial untuk membuka ke bawah */}
         <SpeedDial actions={speedDialActions} direction="down" />
       </div>
 
