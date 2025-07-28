@@ -72,7 +72,7 @@ const ChatInputForm = ({ onSubmit, isLoading }) => {
         ref={textareaRef}
         value={prompt}
         onChange={(e) => setPrompt(e.target.value)}
-        placeholder={isListening ? "Mendengarkan..." : "Tanya tentang coding... (Shift+Enter untuk baris baru)"}
+        placeholder={isListening ? "Mendengarkan..." : "Ada kendala coding? HIMTIChat siap bantu!"}
         className="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none overflow-y-auto"
         rows={1}
         style={{ maxHeight: '120px' }}
