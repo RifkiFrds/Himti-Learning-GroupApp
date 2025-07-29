@@ -3,15 +3,29 @@ import StatsSection from "../Components/Organisms/StatsSection";
 import TestimonialSection from "../Components/Organisms/TestimonialSection";
 import WhyJoinSection from "../Components/Organisms/WhyJoinSection";
 import MentorSection from "../Components/Organisms/MentorSection";
+import AnimatedSection from "../Components/Atoms/AnimatedSection";
 
 const Home = () => {
   return (
     <>
       <HeroSection />
-      <StatsSection />
-      <WhyJoinSection />
-      <MentorSection limit={4} showCTA={true} />
-      <TestimonialSection />
+
+      <AnimatedSection>
+        <StatsSection />
+      </AnimatedSection>
+
+      <AnimatedSection>
+        <WhyJoinSection />
+      </AnimatedSection>
+
+      <AnimatedSection>
+        <MentorSection />
+      </AnimatedSection>
+      
+      <AnimatedSection>
+        <TestimonialSection />
+      </AnimatedSection>
+     
     </>
   )
 }

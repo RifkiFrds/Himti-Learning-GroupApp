@@ -1,6 +1,4 @@
 import { FaUsers, FaListAlt, FaBriefcase } from 'react-icons/fa';
-import ScrollToAnchor from '../../utils/ScrollToAnchor';
-import MentorSection from './MentorSection';
 import Button from '../Atoms/Button'; 
 
 const AboutHero = () => {
@@ -130,10 +128,6 @@ const AboutHero = () => {
           Daftar Sekarang
           </Button>
         </section>
-        <ScrollToAnchor />
-        <div id="mentorsection">
-        <MentorSection showCTA={false} />
-      </div>
       </main>
     </>
   );
