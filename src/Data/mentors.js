@@ -5,6 +5,7 @@ export const mentorsData = [
     role: 'Koordinator Mentor',
     bio: 'Mengatur alur pembelajaran dan memastikan kualitas materi.',
     image: '/avatar.jpg',
+    keahlian: ['Flutter', 'Web Developer'],
     socials: { github: '#', linkedin: '#', instagram: '#' },
   },
   {
@@ -13,6 +14,7 @@ export const mentorsData = [
     role: 'Mentor Web Development',
     bio: 'Fokus pada teknologi frontend modern dan praktik terbaik dalam pengembangan web.',
     image: '/avatar.jpg',
+    keahlian: ['Frontend', 'UI/UX'],
     socials: { github: '#', linkedin: '#', instagram: '#' },
   },
     {
@@ -21,6 +23,7 @@ export const mentorsData = [
     role: 'Mentor Web Development',
     bio: 'Spesialis backend dengan keahlian dalam NodeJS dan database.',
     image: '/avatar.jpg',
+    keahlian: ['Backend', 'Database'],
     socials: { github: '#', linkedin: '#', instagram: '#' },
   },
   {
@@ -29,6 +32,7 @@ export const mentorsData = [
     role: 'Mentor Mobile Development',
     bio: 'Pengembang aplikasi cross-platform menggunakan Flutter.',
     image: '/avatar.jpg',
+    keahlian: ['Flutter', 'Mobile Developer'],
     socials: { github: '#', linkedin: '#', instagram: '#' },
   },
   {
@@ -37,6 +41,7 @@ export const mentorsData = [
     role: 'Mentor Mobile Development',
     bio: 'Berpengalaman dalam pengembangan aplikasi Android native (Kotlin).',
     image: '/avatar.jpg',
+    keahlian: ['UI/UX'],
     socials: { github: '#', linkedin: '#', instagram: '#' },
   },
   {
@@ -45,6 +50,7 @@ export const mentorsData = [
     role: 'Mentor UI/UX Design',
     bio: 'Antusias dalam menciptakan pengalaman pengguna yang intuitif dan indah.',
     image: '/avatar.jpg',
+    keahlian: ['UI/UX'],
     socials: { github: '#', linkedin: '#', instagram: '#' },
   },
   {
@@ -53,6 +59,7 @@ export const mentorsData = [
     role: 'Mentor UI/UX Design',
     bio: 'Fokus pada riset pengguna dan implementasi desain ke dalam prototipe interaktif.',
     image: '/avatar.jpg',
+    keahlian: ['UI/UX'],
     socials: { github: '#', linkedin: '#', instagram: '#' },
   },
   {
@@ -61,6 +68,7 @@ export const mentorsData = [
     role: 'Asisten Mentor',
     bio: 'Siap membantu para anggota dalam memahami konsep-konsep dasar.',
     image: '/avatar.jpg',
+    keahlian: ['Frontend', 'Backend', 'Fullstack Developer'],
     socials: { github: '#', linkedin: '#', instagram: '#' },
   },
 ];
