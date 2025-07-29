@@ -4,6 +4,7 @@ import TestimonialSection from "../Components/Organisms/TestimonialSection";
 import WhyJoinSection from "../Components/Organisms/WhyJoinSection";
 import MentorSection from "../Components/Organisms/MentorSection";
 import AnimatedSection from "../Components/Atoms/AnimatedSection";
+import HIMTIChatSection from "../Components/Organisms/HIMTIChatSection";
 
 const Home = () => {
   return (
@@ -11,7 +12,7 @@ const Home = () => {
       <HeroSection />
 
       <AnimatedSection>
-        <StatsSection />
+        <HIMTIChatSection />
       </AnimatedSection>
 
       <AnimatedSection>
@@ -24,6 +25,10 @@ const Home = () => {
       
       <AnimatedSection>
         <TestimonialSection />
+      </AnimatedSection>
+
+      <AnimatedSection>
+        <StatsSection />
       </AnimatedSection>
      
     </>

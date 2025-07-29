@@ -110,13 +110,13 @@ const Navbar = () => {
             ))}
             <div className="border-t border-gray-200 my-2"></div>
             <a
-              href="#"
+              href="https://himti-lms.vercel.app/sign-in"
               className={`block px-3 py-2 rounded-md text-base ${linkBaseClass} ${inactiveLinkClass}`}
             >
               Login
             </a>
             <a
-              href="https://himti-lms.vercel.app/"
+              href="https://himti-lms.vercel.app/sign-up"
               target="_blank"
               rel="noopener noreferrer"
               className="block w-full text-center mt-2 px-4 py-2.5 bg-primary text-white rounded-lg font-semibold hover:bg-opacity-90 transition-colors"

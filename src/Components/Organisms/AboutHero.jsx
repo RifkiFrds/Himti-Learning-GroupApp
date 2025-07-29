@@ -88,30 +88,6 @@ const AboutHero = () => {
           </div>
         </section>
 
-        <section className="bg-gradient-to-br from-secondary to-primary text-white rounded-xl p-12 mb-20">
-          <h2 className="text-3xl font-bold mb-12 text-center">
-            Pencapaian Kami
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-5xl font-bold text-primary mb-2">500+</div>
-              <div className="text-gray-300">Anggota Aktif</div>
-            </div>
-            <div>
-              <div className="text-5xl font-bold text-primary mb-2">700+</div>
-              <div className="text-gray-300">Proyek Portofolio</div>
-            </div>
-            <div>
-              <div className="text-5xl font-bold text-primary mb-2">5+</div>
-              <div className="text-gray-300">Kelompok Belajar</div>
-            </div>
-            <div>
-              <div className="text-5xl font-bold text-primary mb-2">95%</div>
-              <div className="text-gray-300">Kepuasan Peserta</div>
-            </div>
-          </div>
-        </section>
-
         <section className="bg-gradient-to-br from-primary to-accent text-white rounded-xl p-12 text-center">
           <h2 className="text-3xl font-bold mb-6">
             Siap Bergabung dan Berkembang?

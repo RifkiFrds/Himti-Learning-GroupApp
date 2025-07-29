@@ -56,7 +56,7 @@ const ParticlesBackground = () => {
           enable: true,
           area: 800,
         },
-        value: 50, // Jumlah partikel
+        value: 100, // Jumlah partikel
       },
       opacity: {
         value: 0.2,
@@ -76,7 +76,6 @@ const ParticlesBackground = () => {
       id="tsparticles"
       init={particlesInit}
       options={particlesOptions}
-      className="absolute inset-0 z-0" // Penting untuk posisi di latar belakang
     />
   );
 };

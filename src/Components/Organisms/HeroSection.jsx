@@ -19,8 +19,9 @@ const HeroSection = () => {
 
             <div className="mt-10 flex flex-wrap items-center justify-center gap-4 lg:justify-start">
               <Button
-                variant="primary"
-                href="https://himti-lms.vercel.app/"
+                variant='primary'
+                as='Link'
+                to="/program"
                 target="_blank"
                 rel="noopener noreferrer"
               >
