@@ -1,4 +1,4 @@
-import himtiLogo from '../../assets/himti-logo.png';
+import himtiLogo from '../../assets/images/himti-logo.png';
 import { Link } from 'react-router-dom'; 
 import { FaInstagram, FaGithub, FaLinkedin } from 'react-icons/fa';
 

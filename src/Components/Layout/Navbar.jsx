@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import himtiLogo from '../../assets/himti-logo.png';
+import himtiLogo from '../../assets/images/himti-logo.png';
 
 // Mendefinisikan komponen Navbar yang mencakup tautan navigasi dan responsif untuk perangkat mobile.
 const Navbar = () => {
