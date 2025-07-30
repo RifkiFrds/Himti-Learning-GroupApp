@@ -48,7 +48,7 @@ const PowerLogoLoader = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5 }}
       >
-        MEMBANGUN APLIKASI...
+        Membangun Aplikasi...
       </motion.p>
     </div>
   );
