@@ -16,7 +16,7 @@ Platform komunitas belajar modern untuk Himpunan Mahasiswa Teknik Informatika (H
 
 ---
 
-### ## 🌟 Fitur Utama & Keunggulan Teknis
+### 🌟 Fitur Utama & Keunggulan Teknis
 
 Aplikasi ini dibangun sebagai **Single Page Application (SPA)** yang modern dengan fokus pada *user experience* yang dinamis, fungsionalitas AI yang canggih, dan arsitektur yang solid.
 
@@ -39,7 +39,16 @@ Aplikasi ini dibangun sebagai **Single Page Application (SPA)** yang modern deng
 
 ---
 
-### ## 🛠️ Arsitektur & Teknologi
+### 🏛️ Integrasi dengan Platform Eksternal (LMS)
+
+Untuk menciptakan pengalaman pengguna yang mulus, landing page ini terintegrasi secara langsung dengan platform [HIMTI LMS](himti-lms.vercel.app). Beberapa tombol ajakan (Call-to-Action) utama dirancang untuk mengarahkan pengguna ke halaman yang relevan di LMS, menjadikan landing page ini sebagai "gerbang depan" yang efektif untuk ekosistem pembelajaran HIMTI.
+
+# Integrasi ini mencakup:
+- Tombol Login: Mengarahkan langsung ke halaman login HIMTI LMS.
+- Tombol Daftar Sekarang: Mengarahkan ke halaman registrasi di platform LMS.
+- Tautan Materi & Program: Tombol seperti "Lihat Course" dan "Pelajari Lebih Lanjut" juga terhubung ke bagian spesifik di dalam LMS untuk menjaga alur pengguna tetap lancar.
+
+### 🛠️ Arsitektur & Teknologi
 
 #### **Tech Stack Utama**
 
@@ -88,7 +97,7 @@ Aplikasi ini dibangun sebagai **Single Page Application (SPA)** yang modern deng
 ```
 ---
 
-### ## 🤖 Penjelasan Dukungan AI
+### 🤖 Penjelasan Dukungan AI
 
 Proyek ini mengintegrasikan model AI **IBM Granite** melalui platform Replicate. Integrasi ini tidak hanya sekadar memanggil API, tetapi juga melibatkan beberapa lapisan rekayasa:
 -   **Backend Serverless:** Menggunakan **Netlify Functions** sebagai perantara yang aman untuk melindungi API Key agar tidak terekspos di sisi klien.
@@ -97,7 +106,7 @@ Proyek ini mengintegrasikan model AI **IBM Granite** melalui platform Replicate.
 
 ---
 
-### ## 셋 Setup & Instalasi Lokal
+### 셋 Setup & Instalasi Lokal
 
 1.  **Prasyarat:** Node.js (v18.x atau lebih).
 2.  **Clone repository ini:**
@@ -123,7 +132,7 @@ Proyek ini mengintegrasikan model AI **IBM Granite** melalui platform Replicate.
 
 ---
 
-### ## Referensi & Apresiasi
+### Referensi & Apresiasi
 -   **Tailwind CSS**, **Preline UI**, dan **HyperUI** untuk inspirasi komponen UI.
 -   Komunitas *open-source* di balik **Vite**, **React**, **Framer Motion**, **LottieFiles**, dan semua *library* luar biasa yang digunakan dalam proyek ini.
 
