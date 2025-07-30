@@ -74,7 +74,7 @@ const HIMTIChatSection = () => {
               <p className="mt-4 text-lg text-purple-100">
                 Memperkenalkan HIMTIChat, asisten AI personal Anda yang terintegrasi langsung di dalam platform.
               </p>
-              <div className="mt-8 space-y-4">
+              <div className="mt-8 text-left space-y-4">
                 {features.map((feature, index) => (
                   <motion.div
                     key={index}
