@@ -1,6 +1,6 @@
 # Capstone Project: HIMTI Learning Group & HIMTIChat AI
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/68878cbe-d4d8-0600-0885-9dc4/deploy-status)](https://app.netlify.com/sites/kelompok-belajar-himti/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/68878cbe-d4d8-0600-0885-9dc4/deploy-status)👀](https://app.netlify.com/sites/kelompok-belajar-himti/deploys)
 
 Platform komunitas belajar modern untuk Himpunan Mahasiswa Teknik Informatika (HIMTI) UMT, yang terintegrasi penuh dengan **HIMTIChat**, asisten AI canggih yang didukung oleh model **IBM Granite**. Proyek ini adalah submission untuk **Capstone Project Hacktiv8 x IBM**.
 
