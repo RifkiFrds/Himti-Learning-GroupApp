@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { FaCode, FaMobileAlt, FaPalette, FaNetworkWired, FaBookOpen, FaUsers } from 'react-icons/fa';
+import { FaCode, FaMobileAlt, FaPalette, FaNetworkWired, FaUserSecret, FaUsers } from 'react-icons/fa';
 import { HiArrowRight } from "react-icons/hi";
 
 const icons = {
@@ -7,7 +7,7 @@ const icons = {
   mobile: FaMobileAlt,
   uiux: FaPalette,
   network: FaNetworkWired,
-  workshop: FaBookOpen,
+  cyberscurity: FaUserSecret,
   sharing: FaUsers,
 };
 
@@ -26,6 +26,7 @@ const ProgramCard = ({ icon, title, description, link }) => {
       <Link
         to={link}
         className="mt-4 text-primary inline-flex items-center font-semibold"
+        target='_blank'
       >
         Pelajari Lebih Lanjut
         <HiArrowRight className="w-4 h-4 ml-2" />
