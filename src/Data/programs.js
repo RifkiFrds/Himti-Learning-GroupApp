@@ -29,16 +29,16 @@ export const programsData = [
   },
   {
     id: 5,
-    icon: 'workshop',
-    title: "Workshop Internal HIMTI",
-    description: "Sesi pelatihan intensif dengan topik spesifik yang diadakan khusus untuk anggota internal HIMTI.",
-    link: "https://www.himtiumt.or.id/"
+    icon: 'cyberscurity',
+    title: "Cyber Security",
+    description: "Pelatihan mendalam seputar keamanan digital untuk meningkatkan pemahaman anggota HIMTI dalam menghadapi ancaman siber.",
+    link: "https://himti-lms.vercel.app/"
   },
   {
     id: 6,
     icon: 'sharing',
     title: "Sharing Session",
     description: "Diskusi santai dan berbagi ilmu bersama para ahli dari industri atau alumni yang sudah berpengalaman.",
-    link: "https://www.himtiumt.or.id/"
+    link: "https://himti-lms.vercel.app/"
   },
 ];
