@@ -43,7 +43,7 @@ Aplikasi ini dibangun sebagai **Single Page Application (SPA)** yang modern deng
 
 Untuk menciptakan pengalaman pengguna yang mulus, landing page ini terintegrasi secara langsung dengan platform [HIMTI LMS](himti-lms.vercel.app). Beberapa tombol ajakan (Call-to-Action) utama dirancang untuk mengarahkan pengguna ke halaman yang relevan di LMS, menjadikan landing page ini sebagai "gerbang depan" yang efektif untuk ekosistem pembelajaran HIMTI.
 
-# Integrasi ini mencakup:
+**Integrasi ini mencakup:**
 - Tombol Login: Mengarahkan langsung ke halaman login HIMTI LMS.
 - Tombol Daftar Sekarang: Mengarahkan ke halaman registrasi di platform LMS.
 - Tautan Materi & Program: Tombol seperti "Lihat Course" dan "Pelajari Lebih Lanjut" juga terhubung ke bagian spesifik di dalam LMS untuk menjaga alur pengguna tetap lancar.
