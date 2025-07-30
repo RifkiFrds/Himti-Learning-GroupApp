@@ -111,7 +111,7 @@ Proyek ini mengintegrasikan model AI **IBM Granite** melalui platform Replicate.
 1.  **Prasyarat:** Node.js (v18.x atau lebih).
 2.  **Clone repository ini:**
     ```bash
-    git clone [https://github.com/RifkiFrds/Himti-Learning-GroupApp.git](https://github.com/RifkiFrds/Himti-Learning-GroupApp.git)
+    git clone https://github.com/RifkiFrds/Himti-Learning-GroupApp.git
     cd Himti-Learning-GroupApp
     ```
 3.  **Install dependencies:**
