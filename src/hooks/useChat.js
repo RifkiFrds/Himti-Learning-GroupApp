@@ -86,7 +86,9 @@ export const useChat = () => {
       });
       if (!response.ok) throw new Error('Gagal mendapatkan respons dari server.');
       const data = await response.json();
-      const aiMessage = { sender: 'ai', text: data.response, feedback: null };
+
+      const cleanedText = data.response.replace(/<s>|<\/s>/g, '').trim();
+      const aiMessage = { sender: 'ai', text: cleanedText, feedback: null };
       
       setConversations(prev => prev.map(convo => 
         convo.id === activeConversationId ? { ...convo, messages: [...convo.messages, aiMessage] } : convo
