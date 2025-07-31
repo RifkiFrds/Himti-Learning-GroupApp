@@ -10,8 +10,6 @@ Platform komunitas belajar modern untuk Himpunan Mahasiswa Teknik Informatika (H
 
 ### ✨ Demo Fitur Unggulan
 
-*(Sangat disarankan untuk membuat GIF baru yang menunjukkan alur lengkap: Hero section dengan partikel -> Scroll reveal -> Membuka HIMTIChat dengan CTA Lottie -> Menggunakan voice-to-text -> Mendapatkan jawaban kode -> Menyalin kode -> Membuka sidebar riwayat -> Menghapus percakapan)*
-
 ![Demo GIF HIMTIChat](link-ke-gif-baru-anda.gif)
 
 ---
