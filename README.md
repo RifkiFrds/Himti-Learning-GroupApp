@@ -10,7 +10,7 @@ Platform komunitas belajar modern untuk Himpunan Mahasiswa Teknik Informatika (H
 
 ### ✨ Demo Fitur Unggulan
 
-![Demo GIF HIMTIChat](https://jumpshare.com/s/8EFNX2YwUPaSFRRjSQjE)
+![Demo GIF HIMTIChat](public/demo.gif)
 
 ---
 
