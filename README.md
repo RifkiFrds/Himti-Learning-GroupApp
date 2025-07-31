@@ -8,12 +8,6 @@ Platform komunitas belajar modern untuk Himpunan Mahasiswa Teknik Informatika (H
 
 ---
 
-### ✨ Demo Fitur Unggulan
-
-![Demo HIMTIChat](https://i.imgur.com/GRFxDc1.gif)
-
----
-
 ### 🌟 Fitur Utama & Keunggulan Teknis
 
 Aplikasi ini dibangun sebagai **Single Page Application (SPA)** yang modern dengan fokus pada *user experience* yang dinamis, fungsionalitas AI yang canggih, dan arsitektur yang solid.
