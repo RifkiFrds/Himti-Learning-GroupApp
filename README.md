@@ -10,8 +10,7 @@ Platform komunitas belajar modern untuk Himpunan Mahasiswa Teknik Informatika (H
 
 ### ✨ Demo Fitur Unggulan
 
-<img src="https://i.imgur.com/GRFxDc1.gif" alt="Demo GIF HIMTIChat" width="600" style="border-radius: 12px;" />
-
+![Demo HIMTIChat](https://i.imgur.com/GRFxDc1.gif)
 
 ---
 
