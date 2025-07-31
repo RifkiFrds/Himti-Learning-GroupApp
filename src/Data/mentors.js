@@ -37,7 +37,7 @@ export const mentorsData = [
   },
   {
     id: 5,
-    name: 'Avion Rizki Syafino',
+    name: 'Yoristian Erdi Saputra',
     role: 'Mentor Mobile Development',
     bio: 'Berpengalaman dalam pengembangan aplikasi Android native (Kotlin).',
     image: '/avatar.jpg',
@@ -55,7 +55,7 @@ export const mentorsData = [
   },
   {
     id: 7,
-    name: 'Adrian Maulana',
+    name: 'Avion Rizki Syafino',
     role: 'Mentor UI/UX Design',
     bio: 'Fokus pada riset pengguna dan implementasi desain ke dalam prototipe interaktif.',
     image: '/avatar.jpg',
