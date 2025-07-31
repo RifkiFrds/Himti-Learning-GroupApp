@@ -41,7 +41,7 @@ export const mentorsData = [
     role: 'Mentor Mobile Development',
     bio: 'Berpengalaman dalam pengembangan aplikasi Android native (Kotlin).',
     image: '/avatar.jpg',
-    keahlian: ['UI/UX'],
+    keahlian: ['UI/UX', 'Mobile Developer'],
     socials: { github: '#', linkedin: '#', instagram: '#' },
   },
   {
