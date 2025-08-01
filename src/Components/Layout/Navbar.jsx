@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
-import himtiLogo from '../../assets/images/himti-logo.png';
+import { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
+import himtiLogo from "../../assets/images/himti-logo.png";
 
 // Mendefinisikan komponen Navbar yang mencakup tautan navigasi dan responsif untuk perangkat mobile.
 const Navbar = () => {
@@ -12,17 +12,17 @@ const Navbar = () => {
     const handleScroll = () => {
       setHasScrolled(window.scrollY > 10);
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   const navLinks = [
-    { title: 'Home', path: '/' },
-    { title: 'About', path: '/about' },
-    { title: 'Program', path: '/program' },
-    { title: 'Course', path: '/course' },
+    { title: "Home", path: "/" },
+    { title: "About", path: "/about" },
+    { title: "Program", path: "/program" },
+    { title: "Course", path: "/course" },
   ];
 
   const linkBaseClass = "text-base font-medium transition-colors duration-300";
@@ -30,17 +30,22 @@ const Navbar = () => {
   const inactiveLinkClass = "text-gray-800 hover:text-primary";
 
   return (
-    <nav 
+    <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        hasScrolled ? 'bg-white/50 backdrop-blur-md shadow-md' : 'bg-transparent'
+        hasScrolled
+          ? "bg-white/50 backdrop-blur-md shadow-md"
+          : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between h-20">
-
           <NavLink to="/" className="flex-shrink-0">
             <div className="flex items-center gap-3">
-              <img className="h-10 w-auto" src={himtiLogo} alt="HIMTI Learning Group" />
+              <img
+                className="h-10 w-auto"
+                src={himtiLogo}
+                alt="HIMTI Learning Group"
+              />
               <span className="font-semibold text-gray-600 sm:text-lg">
                 HIMTI Learning Group
               </span>
@@ -52,7 +57,7 @@ const Navbar = () => {
               <NavLink
                 key={link.title}
                 to={link.path}
-                className={({ isActive }) => 
+                className={({ isActive }) =>
                   `${linkBaseClass} ${isActive ? activeLinkClass : inactiveLinkClass}`
                 }
               >
@@ -85,8 +90,18 @@ const Navbar = () => {
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-800 hover:text-primary focus:outline-none"
             >
               <span className="sr-only">Open main menu</span>
-              <svg className="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16m-7 6h7"} />
+              <svg
+                className="h-6 w-6"
+                stroke="currentColor"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16m-7 6h7"}
+                />
               </svg>
             </button>
           </div>
@@ -100,10 +115,10 @@ const Navbar = () => {
               <NavLink
                 key={link.title}
                 to={link.path}
-                className={({ isActive }) => 
+                className={({ isActive }) =>
                   `block px-3 py-2 rounded-md text-base ${linkBaseClass} ${isActive ? activeLinkClass : inactiveLinkClass}`
                 }
-                onClick={() => setIsOpen(false)} 
+                onClick={() => setIsOpen(false)}
               >
                 {link.title}
               </NavLink>
@@ -124,7 +139,6 @@ const Navbar = () => {
               Daftar Sekarang
             </a>
           </div>
-          
         </div>
       )}
     </nav>

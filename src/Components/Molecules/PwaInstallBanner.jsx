@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { FaDownload, FaTimes } from 'react-icons/fa';
-import himtiLogo from '../../assets/images/himti-logo.png'; // Pastikan path logo ini benar
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { FaDownload, FaTimes } from "react-icons/fa";
+import himtiLogo from "../../assets/images/himti-logo.png"; // Pastikan path logo ini benar
 
 const PwaInstallBanner = () => {
   const [deferredPrompt, setDeferredPrompt] = useState(null);
@@ -14,7 +14,7 @@ const PwaInstallBanner = () => {
       setIsVisible(true);
     };
 
-    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+    window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
 
     // --- LOGIKA BARU: HILANG OTOMATIS ---
     let timer;
@@ -26,7 +26,10 @@ const PwaInstallBanner = () => {
     }
 
     return () => {
-      window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+      window.removeEventListener(
+        "beforeinstallprompt",
+        handleBeforeInstallPrompt,
+      );
       // Bersihkan timer jika komponen di-unmount atau isVisible berubah
       if (timer) {
         clearTimeout(timer);
@@ -36,10 +39,10 @@ const PwaInstallBanner = () => {
 
   const handleInstallClick = async () => {
     if (!deferredPrompt) return;
-    
+
     deferredPrompt.prompt();
     await deferredPrompt.userChoice;
-    
+
     setIsVisible(false);
     setDeferredPrompt(null);
   };
@@ -55,17 +58,28 @@ const PwaInstallBanner = () => {
           initial={{ y: 100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 100, opacity: 0 }}
-          transition={{ type: 'spring', stiffness: 200, damping: 30 }}
+          transition={{ type: "spring", stiffness: 200, damping: 30 }}
           // --- KELAS RESPONSIVE BARU ---
           className="fixed bottom-0 left-0 right-0 sm:bottom-5 sm:left-1/2 sm:-translate-x-1/2 sm:w-[90vw] max-w-lg bg-white rounded-t-2xl sm:rounded-xl shadow-2xl p-4 flex flex-col sm:flex-row items-center gap-4 z-50 border"
         >
           <div className="flex items-center gap-4 w-full">
-            <img src={himtiLogo} alt="HIMTI Logo" className="w-12 h-12 flex-shrink-0" />
+            <img
+              src={himtiLogo}
+              alt="HIMTI Logo"
+              className="w-12 h-12 flex-shrink-0"
+            />
             <div className="flex-grow">
-              <p className="font-bold text-secondary">Pasang Aplikasi HIMTI Sekarang!</p>
-              <p className="text-sm text-gray-500">Nikmati akses instan langsung dari layar utama Anda.</p>
+              <p className="font-bold text-secondary">
+                Pasang Aplikasi HIMTI Sekarang!
+              </p>
+              <p className="text-sm text-gray-500">
+                Nikmati akses instan langsung dari layar utama Anda.
+              </p>
             </div>
-            <button onClick={handleDismissClick} className="sm:hidden text-gray-400 hover:text-gray-600">
+            <button
+              onClick={handleDismissClick}
+              className="sm:hidden text-gray-400 hover:text-gray-600"
+            >
               <FaTimes />
             </button>
           </div>
@@ -77,7 +91,10 @@ const PwaInstallBanner = () => {
               <FaDownload />
               Install
             </button>
-            <button onClick={handleDismissClick} className="hidden sm:block text-gray-400 hover:text-gray-600">
+            <button
+              onClick={handleDismissClick}
+              className="hidden sm:block text-gray-400 hover:text-gray-600"
+            >
               <FaTimes />
             </button>
           </div>

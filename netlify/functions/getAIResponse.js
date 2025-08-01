@@ -4,7 +4,7 @@ const replicate = new Replicate();
 
 export const handler = async (event) => {
   // Hanya izinkan metode POST
-  if (event.httpMethod !== 'POST') {
+  if (event.httpMethod !== "POST") {
     return {
       statusCode: 405,
       body: "Method Not Allowed",
@@ -63,7 +63,6 @@ ATURAN DALAM MENJAWAB:
       statusCode: 200,
       body: JSON.stringify({ response: output.join("") }),
     };
-
   } catch (error) {
     console.error("Error dari Replicate API:", error);
     return {

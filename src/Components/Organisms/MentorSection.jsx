@@ -1,21 +1,23 @@
-import React, { useState, useMemo } from 'react';
-import { mentorsData } from '../../Data/mentors';
-import { motion, AnimatePresence } from 'framer-motion';
-import MentorCard from '../Molecules/MentorCard';
+import React, { useState, useMemo } from "react";
+import { mentorsData } from "../../Data/mentors";
+import { motion, AnimatePresence } from "framer-motion";
+import MentorCard from "../Molecules/MentorCard";
 
 const MentorSection = () => {
-  const [activeFilter, setActiveFilter] = useState('Semua');
+  const [activeFilter, setActiveFilter] = useState("Semua");
 
   const filterOptions = useMemo(() => {
-    const allSkills = mentorsData.flatMap(mentor => mentor.keahlian);
-    return ['Semua', ...new Set(allSkills)];
+    const allSkills = mentorsData.flatMap((mentor) => mentor.keahlian);
+    return ["Semua", ...new Set(allSkills)];
   }, []);
 
   const filteredMentors = useMemo(() => {
-    if (activeFilter === 'Semua') {
+    if (activeFilter === "Semua") {
       return mentorsData;
     }
-    return mentorsData.filter(mentor => mentor.keahlian.includes(activeFilter));
+    return mentorsData.filter((mentor) =>
+      mentor.keahlian.includes(activeFilter),
+    );
   }, [activeFilter]);
 
   // Varian untuk container grid, untuk menganimasikan anak-anaknya (stagger effect)
@@ -37,19 +39,20 @@ const MentorSection = () => {
             Tim <span className="text-primary">Mentor & Pengurus</span> Kami
           </h2>
           <p className="max-w-2xl mx-auto my-6 text-center text-gray-500">
-            Mereka adalah para mahasiswa berdedikasi dan praktisi berpengalaman yang siap membimbing Anda.
+            Mereka adalah para mahasiswa berdedikasi dan praktisi berpengalaman
+            yang siap membimbing Anda.
           </p>
         </div>
 
         <div className="flex items-center justify-center flex-wrap gap-3 mb-10">
-          {filterOptions.map(filter => (
+          {filterOptions.map((filter) => (
             <button
               key={filter}
               onClick={() => setActiveFilter(filter)}
               className={`px-5 py-2 text-sm font-semibold rounded-full transition-all duration-300 ${
                 activeFilter === filter
-                  ? 'bg-primary text-white shadow-md'
-                  : 'bg-white text-gray-600 hover:bg-gray-100'
+                  ? "bg-primary text-white shadow-md"
+                  : "bg-white text-gray-600 hover:bg-gray-100"
               }`}
             >
               {filter}

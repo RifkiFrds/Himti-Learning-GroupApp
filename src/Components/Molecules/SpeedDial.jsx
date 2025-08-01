@@ -1,21 +1,23 @@
-import React, { useState } from 'react';
-import { FaPlus, FaTimes } from 'react-icons/fa';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from "react";
+import { FaPlus, FaTimes } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
 
-const SpeedDial = ({ actions, direction = 'up' }) => { // 1. Tambahkan prop 'direction'
+const SpeedDial = ({ actions, direction = "up" }) => {
+  // 1. Tambahkan prop 'direction'
   const [isOpen, setIsOpen] = useState(false);
 
   // 2. Tentukan kelas posisi berdasarkan arah
-  const menuPositionClass = direction === 'up' 
-    ? 'absolute bottom-full right-0 mb-3' 
-    : 'absolute top-full right-0 mt-3';
+  const menuPositionClass =
+    direction === "up"
+      ? "absolute bottom-full right-0 mb-3"
+      : "absolute top-full right-0 mt-3";
 
   return (
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="w-12 h-12 flex items-center justify-center bg-primary text-white rounded-full shadow-lg hover:bg-purple-700 transition-transform duration-300"
-        style={{ transform: isOpen ? 'rotate(45deg)' : 'none' }}
+        style={{ transform: isOpen ? "rotate(45deg)" : "none" }}
         aria-label="Buka menu aksi"
       >
         {isOpen ? <FaTimes size={20} /> : <FaPlus size={20} />}
@@ -23,9 +25,9 @@ const SpeedDial = ({ actions, direction = 'up' }) => { // 1. Tambahkan prop 'dir
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: direction === 'up' ? 10 : -10 }}
+            initial={{ opacity: 0, y: direction === "up" ? 10 : -10 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: direction === 'up' ? 10 : -10 }}
+            exit={{ opacity: 0, y: direction === "up" ? 10 : -10 }}
             className={`${menuPositionClass} flex flex-col items-end gap-2`}
           >
             {actions.map((action, index) => (

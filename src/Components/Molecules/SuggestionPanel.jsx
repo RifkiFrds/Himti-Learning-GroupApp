@@ -1,7 +1,13 @@
-import React from 'react';
-import { FaCode, FaPython, FaCloud, FaBook, FaChevronRight } from 'react-icons/fa';
-import { suggestionData } from '../../Data/suggestionPrompts';
-import { motion } from 'framer-motion';
+import React from "react";
+import {
+  FaCode,
+  FaPython,
+  FaCloud,
+  FaBook,
+  FaChevronRight,
+} from "react-icons/fa";
+import { suggestionData } from "../../Data/suggestionPrompts";
+import { motion } from "framer-motion";
 
 const icons = {
   FaCode: <FaCode className="text-blue-500" />,
@@ -13,7 +19,9 @@ const icons = {
 const SuggestionPanel = ({ onSuggestionClick }) => {
   return (
     <div className="mb-4">
-      <p className="text-xs font-bold text-gray-500 mb-2 px-1">Mulai Percakapan</p>
+      <p className="text-xs font-bold text-gray-500 mb-2 px-1">
+        Mulai Percakapan
+      </p>
       <div className="flex items-center space-x-2 overflow-x-auto pb-2 -mx-3 px-3">
         {suggestionData.map((suggestion, index) => (
           <motion.button
@@ -30,8 +38,12 @@ const SuggestionPanel = ({ onSuggestionClick }) => {
               <FaChevronRight className="text-gray-300" />
             </div>
             <div>
-              <p className="text-sm font-bold text-secondary">{suggestion.title}</p>
-              <p className="text-xs text-gray-500 mt-1">{suggestion.description}</p>
+              <p className="text-sm font-bold text-secondary">
+                {suggestion.title}
+              </p>
+              <p className="text-xs text-gray-500 mt-1">
+                {suggestion.description}
+              </p>
             </div>
           </motion.button>
         ))}

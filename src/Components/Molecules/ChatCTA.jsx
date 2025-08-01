@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import Lottie from 'lottie-react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { FaWandSparkles } from 'react-icons/fa6';
-import robotAnimation from '../../assets/robot-lottie.json';
+import React, { useState, useEffect } from "react";
+import Lottie from "lottie-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { FaWandSparkles } from "react-icons/fa6";
+import robotAnimation from "../../assets/robot-lottie.json";
 
 const ChatCTA = ({ onClick }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -52,7 +52,7 @@ const ChatCTA = ({ onClick }) => {
             initial={{ opacity: 0, scale: 0.8, x: 20 }}
             animate={{ opacity: 1, scale: 1, x: 0 }}
             exit={{ opacity: 0, scale: 0.8, x: 20 }}
-            transition={{ type: 'spring', stiffness: 200, damping: 20 }}
+            transition={{ type: "spring", stiffness: 200, damping: 20 }}
             className="w-52 p-4 bg-gradient-to-br from-white to-gray-100 rounded-xl shadow-lg border border-gray-200"
           >
             <motion.div
@@ -60,11 +60,19 @@ const ChatCTA = ({ onClick }) => {
               initial="hidden"
               animate="visible"
             >
-              <motion.div variants={textItemVariants} className="flex items-center gap-2">
+              <motion.div
+                variants={textItemVariants}
+                className="flex items-center gap-2"
+              >
                 <FaWandSparkles className="text-primary" />
-                <p className="text-sm font-bold text-secondary">Butuh Bantuan?</p>
+                <p className="text-sm font-bold text-secondary">
+                  Butuh Bantuan?
+                </p>
               </motion.div>
-              <motion.p variants={textItemVariants} className="text-xs text-gray-500 mt-1">
+              <motion.p
+                variants={textItemVariants}
+                className="text-xs text-gray-500 mt-1"
+              >
                 Klik aku untuk tanya apa saja!
               </motion.p>
             </motion.div>

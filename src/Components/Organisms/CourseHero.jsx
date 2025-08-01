@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { useState, useEffect } from "react";
 import CourseCard from "../Molecules/CourseCard";
 import { coursesData } from "../../Data/courses";
@@ -10,12 +10,13 @@ const CourseHero = () => {
 
   // menggunakan efek untuk memperbarui daftar course yang difilter berdasarkan query pencarian
   useEffect(() => {
-    const filtered = coursesData.filter(course =>
-      course.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      course.description.toLowerCase().includes(searchQuery.toLowerCase())
+    const filtered = coursesData.filter(
+      (course) =>
+        course.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        course.description.toLowerCase().includes(searchQuery.toLowerCase()),
     );
     setFilteredCourses(filtered);
-  }, [searchQuery]); 
+  }, [searchQuery]);
 
   return (
     <div className="bg-gray-50 min-h-screen animate-fade-in-up">
@@ -25,7 +26,8 @@ const CourseHero = () => {
             Jelajahi Semua Course
           </h1>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-600">
-            Temukan materi yang tepat untuk meningkatkan keahlianmu. Ketik untuk mencari course.
+            Temukan materi yang tepat untuk meningkatkan keahlianmu. Ketik untuk
+            mencari course.
           </p>
           <div className="mx-auto mt-8 w-full max-w-lg">
             <input
@@ -60,4 +62,4 @@ const CourseHero = () => {
   );
 };
 
-export default CourseHero
+export default CourseHero;

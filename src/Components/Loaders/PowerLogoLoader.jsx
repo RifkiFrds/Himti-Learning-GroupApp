@@ -1,14 +1,13 @@
 // components/Loaders/PowerLogoLoader.jsx
-import React from 'react';
-import { motion } from 'framer-motion';
-import himtiLogo from '../../assets/images/himti-logo.png'; // Sesuaikan path ke logo Anda
+import React from "react";
+import { motion } from "framer-motion";
+import himtiLogo from "../../assets/images/himti-logo.png"; // Sesuaikan path ke logo Anda
 
 const PowerLogoLoader = () => {
   return (
     <div className="flex flex-col justify-center items-center h-screen bg-slate-900 overflow-hidden">
       {/* Container untuk menampung logo dan aura */}
       <div className="relative flex justify-center items-center w-40 h-40">
-        
         {/* 1. Aura Energi (Cincin yang mengembang) */}
         <motion.div
           className="absolute w-full h-full rounded-full border-2 border-purple-500"
@@ -35,10 +34,9 @@ const PowerLogoLoader = () => {
             duration: 2.3,
             ease: "easeInOut",
             repeat: Infinity,
-            repeatType: 'mirror'
+            repeatType: "mirror",
           }}
         />
-
       </div>
 
       {/* 3. Teks yang lebih kontekstual */}

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { FaRegClipboard, FaCheck } from 'react-icons/fa';
+import React, { useState } from "react";
+import { FaRegClipboard, FaCheck } from "react-icons/fa";
 
 const CodeBlock = ({ code }) => {
   const [isCopied, setIsCopied] = useState(false);

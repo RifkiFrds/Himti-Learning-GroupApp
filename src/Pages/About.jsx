@@ -1,12 +1,12 @@
-import React from 'react'
-import AboutHero from '../Components/Organisms/AboutHero'
+import React from "react";
+import AboutHero from "../Components/Organisms/AboutHero";
 
 function About() {
   return (
     <>
-    <AboutHero/>
+      <AboutHero />
     </>
-  )
+  );
 }
 
-export default About
+export default About;

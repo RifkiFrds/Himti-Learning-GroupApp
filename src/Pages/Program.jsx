@@ -1,12 +1,12 @@
-import React from 'react'
-import ProgramHero from '../Components/Organisms/ProgramHero';
+import React from "react";
+import ProgramHero from "../Components/Organisms/ProgramHero";
 
 function Program() {
   return (
     <>
-    <ProgramHero />
+      <ProgramHero />
     </>
-  )
+  );
 }
 
-export default Program
+export default Program;

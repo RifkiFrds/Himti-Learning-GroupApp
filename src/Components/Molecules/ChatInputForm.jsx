@@ -1,14 +1,15 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { FaPaperPlane, FaMicrophone } from 'react-icons/fa';
+import React, { useState, useRef, useEffect } from "react";
+import { FaPaperPlane, FaMicrophone } from "react-icons/fa";
 
 const ChatInputForm = ({ onSubmit, isLoading }) => {
-  const [prompt, setPrompt] = useState('');
+  const [prompt, setPrompt] = useState("");
   const [isListening, setIsListening] = useState(false);
   const recognitionRef = useRef(null);
   const textareaRef = useRef(null);
 
   useEffect(() => {
-    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    const SpeechRecognition =
+      window.SpeechRecognition || window.webkitSpeechRecognition;
     if (!SpeechRecognition) {
       console.warn("Browser tidak mendukung Web Speech API.");
       return;
@@ -17,22 +18,22 @@ const ChatInputForm = ({ onSubmit, isLoading }) => {
     const recognition = new SpeechRecognition();
     recognition.continuous = true;
     recognition.interimResults = true;
-    recognition.lang = 'id-ID';
+    recognition.lang = "id-ID";
 
     recognition.onresult = (event) => {
-      let finalTranscript = '';
+      let finalTranscript = "";
       for (let i = event.resultIndex; i < event.results.length; ++i) {
         if (event.results[i].isFinal) {
           finalTranscript += event.results[i][0].transcript;
         }
       }
       if (finalTranscript) {
-        setPrompt(prevPrompt => prevPrompt.trim() + ' ' + finalTranscript);
+        setPrompt((prevPrompt) => prevPrompt.trim() + " " + finalTranscript);
       }
     };
 
     recognition.onerror = (event) => {
-      console.error('Speech recognition error:', event.error);
+      console.error("Speech recognition error:", event.error);
       setIsListening(false);
     };
 
@@ -54,7 +55,7 @@ const ChatInputForm = ({ onSubmit, isLoading }) => {
 
   useEffect(() => {
     if (textareaRef.current) {
-      textareaRef.current.style.height = 'auto';
+      textareaRef.current.style.height = "auto";
       textareaRef.current.style.height = `${textareaRef.current.scrollHeight}px`;
     }
   }, [prompt]);
@@ -63,7 +64,7 @@ const ChatInputForm = ({ onSubmit, isLoading }) => {
     e.preventDefault();
     if (!prompt.trim()) return;
     onSubmit(prompt);
-    setPrompt('');
+    setPrompt("");
   };
 
   return (
@@ -75,24 +76,24 @@ const ChatInputForm = ({ onSubmit, isLoading }) => {
         placeholder={isListening ? "Mendengarkan..." : "Cari solusi coding..."}
         className="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none overflow-y-auto"
         rows={1}
-        style={{ maxHeight: '120px' }}
+        style={{ maxHeight: "120px" }}
         disabled={isLoading}
         onKeyDown={(e) => {
-          if (e.key === 'Enter' && !e.shiftKey) {
+          if (e.key === "Enter" && !e.shiftKey) {
             e.preventDefault();
             handleFormSubmit(e);
           }
         }}
       />
-      
+
       <button
         type="button"
         onClick={handleListen}
         disabled={isLoading}
         className={`p-3 rounded-lg transition-colors self-stretch flex items-center ${
-          isListening 
-          ? 'bg-primary text-white animate-pulse' 
-          : 'bg-gray-400 text-white hover:bg-gray-200'
+          isListening
+            ? "bg-primary text-white animate-pulse"
+            : "bg-gray-400 text-white hover:bg-gray-200"
         }`}
         aria-label="Gunakan Mikrofon"
       >

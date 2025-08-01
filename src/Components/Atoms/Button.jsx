@@ -1,21 +1,22 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 // Mendefiniskan button komponen yang dapat digunakan sebagai tautan atau tombol biasa, dengan varian primary dan secondary
-const Button = ({ 
-  as = 'a', 
-  children, 
-  className = '', 
-  variant = 'primary',
-  ...props 
+const Button = ({
+  as = "a",
+  children,
+  className = "",
+  variant = "primary",
+  ...props
 }) => {
-  
-  const Component = as === 'Link' ? Link : 'a';
+  const Component = as === "Link" ? Link : "a";
 
-  if (variant === 'secondary') {
-    const baseClasses = "inline-flex items-center justify-center px-10 py-3 text-base font-medium tracking-tight rounded-lg transition-all duration-300 ease-in-out transform focus:outline-none focus:ring-4 focus:ring-opacity-50";
-    const secondaryClasses = "bg-transparent text-primary border border-primary hover:bg-primary hover:text-white focus:ring-primary/50";
-    
+  if (variant === "secondary") {
+    const baseClasses =
+      "inline-flex items-center justify-center px-10 py-3 text-base font-medium tracking-tight rounded-lg transition-all duration-300 ease-in-out transform focus:outline-none focus:ring-4 focus:ring-opacity-50";
+    const secondaryClasses =
+      "bg-transparent text-primary border border-primary hover:bg-primary hover:text-white focus:ring-primary/50";
+
     return (
       <Component
         className={`${baseClasses} ${secondaryClasses} ${className}`}

@@ -1,6 +1,6 @@
-import React, { useCallback } from 'react';
-import Particles from 'react-tsparticles';
-import { loadSlim } from 'tsparticles-slim';
+import React, { useCallback } from "react";
+import Particles from "react-tsparticles";
+import { loadSlim } from "tsparticles-slim";
 
 const ParticlesBackground = () => {
   const particlesInit = useCallback(async (engine) => {
@@ -11,7 +11,7 @@ const ParticlesBackground = () => {
   const particlesOptions = {
     background: {
       color: {
-        value: 'transparent', // Latar belakang transparan agar gradien di CSS terlihat
+        value: "transparent", // Latar belakang transparan agar gradien di CSS terlihat
       },
     },
     fpsLimit: 120,
@@ -19,7 +19,7 @@ const ParticlesBackground = () => {
       events: {
         onHover: {
           enable: true,
-          mode: 'repulse', // Efek menjauh saat kursor mendekat
+          mode: "repulse", // Efek menjauh saat kursor mendekat
         },
         resize: true,
       },
@@ -32,20 +32,20 @@ const ParticlesBackground = () => {
     },
     particles: {
       color: {
-        value: '#ffffff', // Warna partikel
+        value: "#ffffff", // Warna partikel
       },
       links: {
-        color: '#ffffff', // Warna garis penghubung
+        color: "#ffffff", // Warna garis penghubung
         distance: 150,
         enable: true,
         opacity: 0.2,
         width: 1,
       },
       move: {
-        direction: 'none',
+        direction: "none",
         enable: true,
         outModes: {
-          default: 'bounce',
+          default: "bounce",
         },
         random: false,
         speed: 0.5, // Kecepatan gerak partikel
@@ -62,7 +62,7 @@ const ParticlesBackground = () => {
         value: 0.2,
       },
       shape: {
-        type: 'circle',
+        type: "circle",
       },
       size: {
         value: { min: 1, max: 3 },

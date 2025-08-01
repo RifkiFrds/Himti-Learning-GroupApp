@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from 'react';
-import { useInView, useMotionValue, useSpring } from 'framer-motion';
+import React, { useEffect, useRef } from "react";
+import { useInView, useMotionValue, useSpring } from "framer-motion";
 
 const AnimatedCounter = ({ value }) => {
   const ref = useRef(null);

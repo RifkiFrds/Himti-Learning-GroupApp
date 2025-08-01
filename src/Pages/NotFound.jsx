@@ -1,12 +1,12 @@
-import React from 'react'
-import NotFoundHero from '../Components/Organisms/NotFoundHero';
+import React from "react";
+import NotFoundHero from "../Components/Organisms/NotFoundHero";
 
 function NotFound() {
   return (
     <>
-    <NotFoundHero />
+      <NotFoundHero />
     </>
-  )
+  );
 }
 
-export default NotFound
+export default NotFound;

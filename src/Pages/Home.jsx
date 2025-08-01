@@ -22,7 +22,7 @@ const Home = () => {
       <AnimatedSection>
         <MentorSection />
       </AnimatedSection>
-      
+
       <AnimatedSection>
         <TestimonialSection />
       </AnimatedSection>
@@ -30,9 +30,8 @@ const Home = () => {
       <AnimatedSection>
         <StatsSection />
       </AnimatedSection>
-     
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

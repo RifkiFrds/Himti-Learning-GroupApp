@@ -1,12 +1,12 @@
-import React from 'react'
-import CourseHero from '../Components/Organisms/CourseHero'
+import React from "react";
+import CourseHero from "../Components/Organisms/CourseHero";
 
 function Course() {
   return (
     <>
-    <CourseHero/>
+      <CourseHero />
     </>
-  )
+  );
 }
 
 export default Course;

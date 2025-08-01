@@ -1,6 +1,6 @@
-import React from 'react'
-import { programsData } from '../../Data/programs';
-import ProgramCard from '../Molecules/ProgramCard';
+import React from "react";
+import { programsData } from "../../Data/programs";
+import ProgramCard from "../Molecules/ProgramCard";
 
 const ProgramHero = () => {
   return (
@@ -11,7 +11,8 @@ const ProgramHero = () => {
             Program Unggulan Kami
           </h1>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-600">
-            Pilih jalur belajarmu dan mulailah perjalanan untuk menjadi seorang profesional di bidang teknologi.
+            Pilih jalur belajarmu dan mulailah perjalanan untuk menjadi seorang
+            profesional di bidang teknologi.
           </p>
         </div>
 
@@ -31,4 +32,4 @@ const ProgramHero = () => {
   );
 };
 
-export default ProgramHero
+export default ProgramHero;
