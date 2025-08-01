@@ -97,9 +97,8 @@ const AboutHero = () => {
           </p>
         <Button
           variant="primary"
-          as="a"
-          href="https://www.himtiumt.or.id/pendaftaran-kelompok-belajar"
-          target="_blank"
+          as='Link'
+          to="/"
           rel="noopener noreferrer">
           Daftar Sekarang
           </Button>
