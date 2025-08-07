@@ -50,12 +50,10 @@ ATURAN DALAM MENJAWAB:
     const output = await replicate.run("ibm-granite/granite-3.3-8b-instruct", {
       input: {
         prompt: `<s>[INST] ${finalPrompt} [/INST]`,
-        max_new_tokens: 100,
+        max_new_tokens: 400,
         max_length: 100,
         min_tokens: 0,
         temperature: 0.7,
-        presence_penalty: 0,
-        frequency_penalty: 0,
       },
     });
 
