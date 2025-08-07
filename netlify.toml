@@ -2,5 +2,4 @@
   functions = "netlify/functions"
 
 [functions."getAIResponse"]
-  # Memberi waktu 60 detik
   timeout = 60
