@@ -103,7 +103,7 @@ const Footer = () => {
             </h3>
             <ul className="mt-4 space-y-2">
               <li className="flex items-center justify-center md:justify-start">
-                <p>info.himti@umt.ac.id</p>
+                <p>himti.umt11@gmail.com</p>
               </li>
               <li className="flex items-center justify-center md:justify-start">
                 <p>Universitas Muhammadiyah Tangerang</p>
