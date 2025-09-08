@@ -1,11 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { lazy, Suspense } from "react"; // 1. Impor lazy dan Suspense
+import { lazy, Suspense } from "react"; 
 
 import MainLayout from "./Components/Layout/MainLayout";
 import ScrollToTop from "./utils/ScrollTop";
 import PowerLogoLoader from "./Components/Loaders/PowerLogoLoader";
 
-// 2. Ubah impor statis menjadi dinamis menggunakan React.lazy
 const Home = lazy(() => import("./Pages/Home"));
 const About = lazy(() => import("./Pages/About"));
 const Program = lazy(() => import("./Pages/Program"));
