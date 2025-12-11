@@ -3,3 +3,8 @@
 
 [functions."getAIResponse"]
   timeout = 60
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
