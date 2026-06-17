@@ -47,7 +47,7 @@ ATURAN DALAM MENJAWAB:
     const finalPrompt = `${systemPrompt}\n\nUser: "${userPrompt}"\nAssistant:`;
 
     // Menjalankan prompt dengan model IBM Granite dari Replicate
-    const output = await replicate.run("ibm-granite/granite-3.3-8b-instruct", {
+    const output = await replicate.run("google/gemini-2.5-flash", {
       input: {
         prompt: `<s>[INST] ${finalPrompt} [/INST]`,
         max_new_tokens: 400,
