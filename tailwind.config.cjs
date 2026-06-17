@@ -5,10 +5,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#9038FF",
-        secondary: "#0c0c0cff",
-        accent: "#F97316",
-        button: "#f9f6f4ff",
+      "primary": "#EAB308",
+      "secondary": "#3B82F6",
+      "accent": "#F97316",
+      "button": "#F9F6F4"
       },
       keyframes: {
         "pulse-slow": {
