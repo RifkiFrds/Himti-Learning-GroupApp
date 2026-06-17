@@ -28,6 +28,9 @@ const Navbar = () => {
   const linkBaseClass = "text-base font-medium transition-colors duration-300";
   const activeLinkClass = "text-primary";
   const inactiveLinkClass = "text-gray-800 hover:text-primary";
+  
+  const urlLogin = process.env.REACT_APP_LOGIN_URL || "https://lms.himtiumt.org/";
+  const urlRegister = process.env.REACT_APP_REGISTER_URL || "https://lms.himtiumt.org/sign-up";
 
   return (
     <nav
@@ -68,14 +71,14 @@ const Navbar = () => {
 
           <div className="hidden md:flex items-center gap-4">
             <a
-              href="https://himti-lms.vercel.app/sign-in"
+              href={urlLogin}
               target="_blank"
               className="font-semibold text-gray-600 hover:text-primary transition-colors"
             >
               Login
             </a>
             <a
-              href="https://himti-lms.vercel.app/sign-up"
+              href={urlRegister}
               target="_blank"
               rel="noopener noreferrer"
               className="px-5 py-2.5 bg-primary text-white rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300 shadow-md hover:shadow-lg"
